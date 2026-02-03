@@ -1,0 +1,210 @@
+#skill .card{
+    padding: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#skill .card div{
+    width: 100px !important;
+    text-align: center;
+}
+
+#skill .card div label{
+    width: 100%;
+}
+
+.skill-icon{
+    height: 50px;
+    margin: 0 2%;
+}
+
+.education-container{
+    background-color: white !important;
+}
+
+.education-image-container{
+    rotate: -27deg;
+    zoom: 80%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    padding-top: 30px !important;
+}
+
+.pd-top-puc{
+    padding-top: 30px !important;
+}
+
+.pd-top-ucm{
+    padding-top: 45px !important;
+}
+
+.pd-top-cft{
+    padding-top: 65px !important;
+}
+
+.pd-top-insuco{
+    padding-top: 35px !important;
+}
+
+.pd-top-lam{
+    padding-top: 35px !important;
+}
+
+.education-image-container > p{
+    color: #021a6a;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.education-image-container > .h5{
+    color: #021a6a;
+    font-weight: bold;
+    font-size: 1.9rem;
+}
+
+.education-puc,
+.education-ucm,
+.education-cft,
+.education-insuco,
+.education-lam{
+    width: 126%;
+    display: block;
+    position: absolute;
+    background-repeat: no-repeat;
+    opacity: 0.2;
+
+}
+
+.education-puc{
+    background-image: url("../assets/images/insignias/puc.png") !important;
+    zoom: 207%;
+    height: 139%;
+    top: -70px;
+    left: -31px;
+    height: 175%;
+}
+
+.education-ucm{
+    background-image: url("../assets/images/insignias/ucm.png") !important;
+    height: 150%;
+    zoom: 157%;
+    top: -25px;
+    left: 0px;
+}
+
+.education-cft{
+    background-image: url("../assets/images/insignias/cft_san_agustin.png") !important;
+    zoom: 260%;
+    height: 200%;
+    width: 150%;
+    top: -50px;
+    left: -47px;
+}
+
+.education-insuco{
+    background-image: url("../assets/images/insignias/insuco.png") !important;
+    height: 150%;
+    zoom: 281%;
+    top: -10px;
+    left: -14px;
+}
+
+.education-lam{
+    background-image: url("../assets/images/insignias/lam.png") !important;
+    height: 150%;
+    zoom: 200%;
+    top: -19px;
+    left: -15px;
+}
+
+.subtitulo-portafolio{
+    width: 100%;
+    text-align: center;
+}
+
+.app-description > .card{
+    padding: 2%;
+}
+
+.image-app-container{
+    display: flex
+}
+
+.image-app-l,
+.image-app-r{
+    height: 200px;
+    width: auto;
+    margin: 50px 0;
+}
+
+.image-app-l{
+    transform: rotate(346deg);
+}
+
+.image-app-r{
+    transform: rotate(6deg);
+    position: absolute;
+    right: 0;
+}
+
+.images-tools-container div{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.images-tools-container img{
+    height: 70px;
+}
+
+.images-tools-container h4{
+    font-weight: bold;
+    /*text-shadow: 2px 2px 4px #7c897e;*/
+    text-align: center;
+}
+
+.titulos-container img{
+    height: 100px;
+}
+
+.titulos-container .col-md-12{
+    display: flex;
+    justify-content: space-around;
+}
+
+.titulo{
+    height: 355px;
+}
+
+.container-courses{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.certificados-container img{
+    margin: 5px 2.5%;
+}
+
+.certificados-container .col-md-9{
+    display: flex;
+    align-items: center;
+}
+
+.certificados-container .col-md-3{
+    justify-content: right;
+    display: flex;
+}
+
+.obs-info{
+    text-align: center;
+}
+
+.demo-video{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
