@@ -1,12 +1,24 @@
-import { Component } from '@angular/core';
-import { Header } from '../../components/header/header';
+import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import AOS from 'aos';
+import { Skills as SkillService } from '../../services/skills/skills';
+import { Skills } from '../../interface/skills';
 
 @Component({
   selector: 'app-home',
-  imports: [Header],
+  imports: [CommonModule],
   templateUrl: './home.html',
   styleUrl: './home.scss',
 })
-export class Home {
+export class Home implements OnInit {
+  skills: Skills[] = []
 
+  constructor(private skillsService: SkillService) {}
+
+  ngOnInit() {
+    AOS.init();
+    const skills = this.skillsService.getSkills();
+    console.log(skills);
+    this.skills = skills;
+  }
 }
