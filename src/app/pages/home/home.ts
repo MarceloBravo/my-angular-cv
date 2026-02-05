@@ -13,12 +13,13 @@ import { Skills } from '../../interface/skills';
 export class Home implements OnInit {
   skills: Skills[] = []
 
-  constructor(private skillsService: SkillService) {}
+  constructor(
+    private skillsService: SkillService
+  ) {}
 
   ngOnInit() {
     AOS.init();
     const skills = this.skillsService.getSkills();
-    console.log(skills);
     this.skills = skills;
   }
 }
