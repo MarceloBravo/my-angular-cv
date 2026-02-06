@@ -1,0 +1,10 @@
+<div class="section" id="education">
+    <div class="container cc-education">
+        <div class="h4 text-center mb-4 title">Educación Formal</div>
+
+        <div *ngFor="let education of educations; let i =index">
+            <app-education-card [data]="education" id={{i}}></app-education-card>
+        </div>
+
+    </div>
+</div>

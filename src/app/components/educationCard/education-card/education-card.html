@@ -1,0 +1,19 @@
+<div class="card">
+    <div class="row">
+        <div class="col-md-3 bg-primary education-container" data-aos="fade-right" data-aos-offset="50"
+            data-aos-duration="500">
+            <div [class]="'card-body cc-education-header education-image-container pd-top-' + data.styles">
+                <div [class]="'education-' + data.styles" [style]="'background-image: url(../assets/images/insignias/' + data.image + ');'"></div>
+                <p>{{data.years}}</p>
+                <div class="h5">{{data.name}}</div>
+            </div>
+        </div>
+        <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
+            <div class="card-body">
+                <div class="h5">{{data.title}}</div>
+                <p class="category">{{data.institution}}</p>
+                <p>{{data.description}}</p>
+            </div>
+        </div>
+    </div>
+</div>

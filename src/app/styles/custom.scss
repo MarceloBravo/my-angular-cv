@@ -70,7 +70,8 @@
 .education-cft,
 .education-insuco,
 .education-lam{
-    width: 126%;
+    width: 300%;
+    height: 300%;
     display: block;
     position: absolute;
     background-repeat: no-repeat;
@@ -79,42 +80,30 @@
 }
 
 .education-puc{
-    background-image: url("../assets/images/insignias/puc.png") !important;
     zoom: 207%;
-    height: 139%;
     top: -70px;
     left: -31px;
-    height: 175%;
 }
 
 .education-ucm{
-    background-image: url("../assets/images/insignias/ucm.png") !important;
-    height: 150%;
     zoom: 157%;
     top: -25px;
     left: 0px;
 }
 
 .education-cft{
-    background-image: url("../assets/images/insignias/cft_san_agustin.png") !important;
     zoom: 260%;
-    height: 200%;
-    width: 150%;
     top: -50px;
     left: -47px;
 }
 
 .education-insuco{
-    background-image: url("../assets/images/insignias/insuco.png") !important;
-    height: 150%;
     zoom: 281%;
     top: -10px;
     left: -14px;
 }
 
 .education-lam{
-    background-image: url("../assets/images/insignias/lam.png") !important;
-    height: 150%;
     zoom: 200%;
     top: -19px;
     left: -15px;

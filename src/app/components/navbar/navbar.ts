@@ -1,8 +1,9 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Router, RouterLink } from "@angular/router";
 
 @Component({
   selector: 'app-navbar',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './navbar.html',
   styleUrl: './navbar.scss',
 })
@@ -10,7 +11,13 @@ export class Navbar implements OnInit, OnDestroy {
   isMenuOpen = false;
   isOnTop: boolean = true;
   private scrollListener?: () => void;
+  rutaActual: String | null = null;
 
+  constructor(private route: Router) {
+    this.rutaActual = this.route.url;
+  }
+  
+  
   ngOnInit() {
     this.scrollListener = this.checkScroll.bind(this);
     window.addEventListener('scroll', this.scrollListener);

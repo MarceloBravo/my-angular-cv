@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { InfoService } from '../../services/infoService/info-service';
+import { Location } from '@angular/common';
+import { NavigationEnd, Router } from '@angular/router';
+import { filter } from 'rxjs';
 
 @Component({
   selector: 'app-header',
@@ -10,11 +12,16 @@ import { InfoService } from '../../services/infoService/info-service';
 export class Header {
   pageTitle: String = 'Sobre mí';
 
-  constructor(
-      private infoService: InfoService
-    ) {}
+  constructor(private router: Router, private location: Location) {}
 
-     ngOnInit() {
-        this.pageTitle = this.infoService.getTitle();
-      }
+  ngOnInit() {
+    // Escuchar cada vez que cambia la URL
+    this.router.events
+      .pipe(filter((event: any) => event instanceof NavigationEnd))
+      .subscribe(() => {
+        const state = this.location.getState() as { data?: any };
+        this.pageTitle = state.data;
+      });
+  }
+
 }

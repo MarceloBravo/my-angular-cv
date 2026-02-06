@@ -11,7 +11,7 @@ import { Skills } from '../../interface/skills';
   styleUrl: './home.scss',
 })
 export class Home implements OnInit {
-  skills: Skills[] = []
+  skills: Skills[] = [];
 
   constructor(
     private skillsService: SkillService

@@ -7,7 +7,7 @@
     >
       <div class="container">
         <div class="navbar-translate" >
-          <a class="navbar-brand" href="#" rel="tooltip">Marcelo Bravo</a>
+          <a class="navbar-brand" routerLink="/" [state]="{data: 'Sobre mí'}" rel="tooltip">Marcelo Bravo</a>
           <button
             class="navbar-toggler navbar-toggler"
             type="button"
@@ -28,13 +28,13 @@
         >
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link smooth-scroll" href="#about" (click)="closeMenu()">Sobre mí</a>
+              <a class="nav-link smooth-scroll" routerLink="/" fragment="about" [state]="{data: 'Sobre mí'}" (click)="closeMenu()">Sobre mí</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link smooth-scroll" href="#skill" (click)="closeMenu()">Habilidades</a>
+              <a class="nav-link smooth-scroll" routerLink="/"  fragment="skill" [state]="{data: 'Sobre mí'}" (click)="closeMenu()">Habilidades</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link smooth-scroll" href="#education" (click)="closeMenu()">Educación</a>
+              <a class="nav-link smooth-scroll" routerLink="/educacion" [state]="{data: 'Educación'}" (click)="closeMenu()">Educación</a>
             </li>
             <li class="nav-item">
               <a class="nav-link smooth-scroll" href="#portfolio" (click)="closeMenu()">Portafolio</a>
