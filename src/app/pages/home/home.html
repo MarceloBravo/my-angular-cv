@@ -6,27 +6,10 @@
                 <div class="col-lg-6 col-md-12">
                     <div class="card-body">
                         <div class="h4 mt-0 title">Sobre mí</div>
-                        <p>Hola! Soy Marcelo Bravo. Ingeniero en Ejecución en Computación e Informática.</p>
-                        <p>Llevo dedicandome al desarrollo de software desde 2010, primero escribiendo aplicaciones de
-                            escritorio,
-                            con lenguajes tales como Visual FoxPro y Visial Basic 6, luego desde 2013, pasé al
-                            desarrollo web con tecnologías
-                            tales como javascript, PHP y bootstrap, pero sin frameworks, los cuales los comencé a
-                            incorporar entre mis
-                            habilidades a partir del 2019.
-                        </p>
-                        <p>
-                            Me he desempeñado en empresas tales cómo Intituciones de Educación, Entidades municipales
-                            como la Dirección
-                            Comunal de Salud de la ciudad de Talca y también en empresas de desarrollo de software.
-                        </p>
-                        <p>
-                            Reconozco que tengo gran motivación e interés por el constante aprendizaje de
-                            nuevos lenguajes, nuevas metodologías de desarrollo y buenas prácticas de
-                            programación, lo que se puede evidenciar en la cantidad de cursos relacionados con el
-                            desarrollo de software, en los que he participado.
-                            <!-- <a href="https://templateflip.com/templates/creative-cv/" target="_blank">Learn More</a> -->
-                        </p>
+                        <p>{{presentation.parrafo1}}</p>
+                        <p>{{presentation.parrafo2}}</p>
+                        <p>{{presentation.parrafo3}}</p>
+                        <p>{{presentation.parrafo4}}</p>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-12">
@@ -34,19 +17,19 @@
                         <div class="h4 mt-0 title">Información Básica</div>
                         <div class="row mt-3">
                             <div class="col-sm-4"><strong class="text-uppercase">Email:</strong></div>
-                            <a href="mailto:mabc@live.cl" class="col-sm-8">mabc@live.cl</a>
+                            <a href="mailto:mabc@live.cl" class="col-sm-8">{{personalInfo.email}}</a>
                         </div>
                         <div class="row mt-3">
                             <div class="col-sm-4"><strong class="text-uppercase">Teléfono:</strong></div>
-                            <div class="col-sm-8">+56 9 74331085</div>
+                            <div class="col-sm-8">{{personalInfo.telefono}}</div>
                         </div>
                         <div class="row mt-3">
                             <div class="col-sm-4"><strong class="text-uppercase">Ciudad:</strong></div>
-                            <div class="col-sm-8">Talca, Chile.</div>
+                            <div class="col-sm-8">{{personalInfo.ciudad}}</div>
                         </div>
                         <div class="row mt-3">
                             <div class="col-sm-4"><strong class="text-uppercase">Idioma:</strong></div>
-                            <div class="col-sm-8">Español nativo</div>
+                            <div class="col-sm-8">{{personalInfo.idioma}}</div>
                         </div>
                     </div>
                 </div>
