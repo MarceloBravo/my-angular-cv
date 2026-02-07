@@ -63,7 +63,7 @@
               <li class="nav-item dropdown" [class.show]="isDropdownCoursesOpen">
               <a 
                 class="nav-link dropdown-toggle" 
-                routerLink="capacitaciones" 
+                routerLink="/courses" 
                 [state]="{data: 'Capacitaciones'}" 
                 id="sobreMiDropdown" 
                 role="button" 
@@ -75,10 +75,10 @@
               </a>
               <ul class="dropdown-menu {{ isOnTop ? '' : 'no-on-top' }}" [class.show]="isDropdownCoursesOpen" aria-labelledby="sobreMiDropdown">
                 <li>
-                  <a class="dropdown-item smooth-scroll" routerLink="/" fragment="about" [state]="{data: 'Sobre mí'}" (click)="closeMenu()">BOOTCAMPS SENCE</a>
+                  <a class="dropdown-item smooth-scroll" routerLink="/courses" fragment="sence-courses" [state]="{data: 'Capacitaciones SENCE'}" (click)="closeMenu()">BOOTCAMPS SENCE</a>
                 </li>
                 <li>
-                  <a class="dropdown-item smooth-scroll" routerLink="/" fragment="skill" [state]="{data: 'Sobre mí'}" (click)="closeMenu()">CURSOS DE PLATAFORMAS</a>
+                  <a class="dropdown-item smooth-scroll" routerLink="/courses" fragment="other-courses" [state]="{data: 'Otras Capacitaciones'}" (click)="closeMenu()">CURSOS DE PLATAFORMAS</a>
                 </li>
               </ul>
             </li>

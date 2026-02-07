@@ -1,1 +1,19 @@
-<p>courses works!</p>
+<div class="section" id="sence-courses">
+    <div class="container cc-reference">
+        <div class="h4 mb-4 text-center title">Bootcamps y cursos SENCE</div>
+        <div class="card container-courses" data-aos="zoom-in">
+            @for(item of cursosSENCE;track $index){
+                <app-courses-card [data]="item"/>
+            }
+        </div>
+    </div>
+</div>
+
+<div class="section" id="other-courses">
+    <div class="container cc-reference">
+        <div class="h4 mb-4 text-center title">Cursos Udemy y Coursera</div>
+        <div class="card container-courses" data-aos="zoom-in">
+
+        </div>
+    </div>
+</div>
