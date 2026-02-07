@@ -27,12 +27,28 @@
           id="navigation"
         >
           <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link smooth-scroll" routerLink="/" fragment="about" [state]="{data: 'Sobre mí'}" (click)="closeMenu()">Sobre mí</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link smooth-scroll" routerLink="/"  fragment="skill" [state]="{data: 'Sobre mí'}" (click)="closeMenu()">Habilidades</a>
-            </li>
+            <li class="nav-item dropdown" [class.show]="isDropdownHomeOpen">
+              <a 
+                class="nav-link dropdown-toggle" 
+                routerLink="/" 
+                [state]="{data: 'Marcelo Bravo'}" 
+                id="sobreMiDropdown" 
+                role="button" 
+                (click)="toggleDropdownHome($event)"
+                aria-haspopup="true" 
+                [attr.aria-expanded]="isDropdownHomeOpen"
+              >
+                INICIO
+              </a>
+              <ul class="dropdown-menu {{ isOnTop ? '' : 'no-on-top' }}" [class.show]="isDropdownHomeOpen" aria-labelledby="sobreMiDropdown">
+                <li>
+                  <a class="dropdown-item smooth-scroll" routerLink="/" fragment="about" [state]="{data: 'Sobre mí'}" (click)="closeMenu()">SOBRE MÍ</a>
+                </li>
+                <li>
+                  <a class="dropdown-item smooth-scroll" routerLink="/" fragment="skill" [state]="{data: 'Sobre mí'}" (click)="closeMenu()">HABILIDADES</a>
+                </li>
+              </ul>
+            </li>            
             <li class="nav-item">
               <a class="nav-link smooth-scroll" routerLink="/educacion" [state]="{data: 'Educación'}" (click)="closeMenu()">Educación</a>
             </li>
@@ -43,7 +59,28 @@
               <a class="nav-link smooth-scroll" routerLink="/experiencia" [state]="{data: 'Experiencia laboral'}" (click)="closeMenu()">Experiencia laboral</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link smooth-scroll" href="#courses" (click)="closeMenu()">Cursos</a>
+
+              <li class="nav-item dropdown" [class.show]="isDropdownCoursesOpen">
+              <a 
+                class="nav-link dropdown-toggle" 
+                routerLink="capacitaciones" 
+                [state]="{data: 'Capacitaciones'}" 
+                id="sobreMiDropdown" 
+                role="button" 
+                (click)="toggleDropdownCourses($event)"
+                aria-haspopup="true" 
+                [attr.aria-expanded]="isDropdownCoursesOpen"
+              >
+                Capacitaciones
+              </a>
+              <ul class="dropdown-menu {{ isOnTop ? '' : 'no-on-top' }}" [class.show]="isDropdownCoursesOpen" aria-labelledby="sobreMiDropdown">
+                <li>
+                  <a class="dropdown-item smooth-scroll" routerLink="/" fragment="about" [state]="{data: 'Sobre mí'}" (click)="closeMenu()">BOOTCAMPS SENCE</a>
+                </li>
+                <li>
+                  <a class="dropdown-item smooth-scroll" routerLink="/" fragment="skill" [state]="{data: 'Sobre mí'}" (click)="closeMenu()">CURSOS DE PLATAFORMAS</a>
+                </li>
+              </ul>
             </li>
             <li class="nav-item">
               <a class="nav-link smooth-scroll" href="#contact" (click)="closeMenu()">Contacto</a>

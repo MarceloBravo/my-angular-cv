@@ -10,6 +10,8 @@ import { Router, RouterLink } from "@angular/router";
 export class Navbar implements OnInit, OnDestroy {
   isMenuOpen = false;
   isOnTop: boolean = true;
+  isDropdownHomeOpen = false;
+  isDropdownCoursesOpen = false;
   private scrollListener?: () => void;
   rutaActual: String | null = null;
 
@@ -21,12 +23,16 @@ export class Navbar implements OnInit, OnDestroy {
   ngOnInit() {
     this.scrollListener = this.checkScroll.bind(this);
     window.addEventListener('scroll', this.scrollListener);
+    
+    // Cerrar dropdown cuando se hace clic fuera
+    document.addEventListener('click', this.handleClickOutside.bind(this));
   }
 
   ngOnDestroy() {
     if (this.scrollListener) {
       window.removeEventListener('scroll', this.scrollListener);
     }
+    document.removeEventListener('click', this.handleClickOutside.bind(this));
   }
 
   toggleMenu() {
@@ -35,6 +41,30 @@ export class Navbar implements OnInit, OnDestroy {
 
   closeMenu() {
     this.isMenuOpen = false;
+    this.isDropdownHomeOpen = false;
+    this.isDropdownCoursesOpen = false;
+  } 
+  
+  toggleDropdownHome(event: Event) {
+    event.preventDefault();
+    event.stopPropagation();
+    this.isDropdownHomeOpen = !this.isDropdownHomeOpen;
+    this.isDropdownCoursesOpen = false;
+  } 
+  
+  toggleDropdownCourses(event: Event) {
+    event.preventDefault();
+    event.stopPropagation();
+    this.isDropdownCoursesOpen = !this.isDropdownCoursesOpen;
+    this.isDropdownHomeOpen = false;
+  } 
+  
+  handleClickOutside(event: Event) {
+    const target = event.target as Element;
+    if (!target.closest('.dropdown')) {
+      this.isDropdownHomeOpen = false; 
+      this.isDropdownCoursesOpen = false;
+    }
   } 
   
   checkScroll() {
