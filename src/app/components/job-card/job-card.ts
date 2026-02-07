@@ -13,7 +13,7 @@ export class JobCard implements OnInit {
     years: '',
     company: '',
     position: '',
-    detail: ''
+    description: ''
   }
 
   ngOnInit(): void {

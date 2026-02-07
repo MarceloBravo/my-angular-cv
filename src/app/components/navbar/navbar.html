@@ -40,10 +40,7 @@
               <a class="nav-link smooth-scroll" href="#portfolio" (click)="closeMenu()">Portafolio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link smooth-scroll" href="#experience"
-                (click)="closeMenu()"
-                >Experiencia laboral</a
-              >
+              <a class="nav-link smooth-scroll" routerLink="/experiencia" [state]="{data: 'Experiencia laboral'}" (click)="closeMenu()">Experiencia laboral</a>
             </li>
             <li class="nav-item">
               <a class="nav-link smooth-scroll" href="#courses" (click)="closeMenu()">Cursos</a>
