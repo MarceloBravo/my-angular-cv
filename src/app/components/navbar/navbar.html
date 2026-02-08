@@ -7,7 +7,7 @@
     >
       <div class="container">
         <div class="navbar-translate" >
-          <a class="navbar-brand" routerLink="/" [state]="{data: 'Sobre mí'}" rel="tooltip">Marcelo Bravo</a>
+          <a class="navbar-brand" routerLink="/" [state]="{data: 'Marcelo Bravo'}" rel="tooltip">Marcelo Bravo</a>
           <button
             class="navbar-toggler navbar-toggler"
             type="button"
@@ -31,7 +31,7 @@
               <a 
                 class="nav-link dropdown-toggle" 
                 routerLink="/" 
-                [state]="{data: 'Marcelo Bravo'}" 
+                [state]="{data: 'Home'}" 
                 id="sobreMiDropdown" 
                 role="button" 
                 (click)="toggleDropdownHome($event)"
@@ -45,7 +45,7 @@
                   <a class="dropdown-item smooth-scroll" routerLink="/" fragment="about" [state]="{data: 'Sobre mí'}" (click)="closeMenu()">SOBRE MÍ</a>
                 </li>
                 <li>
-                  <a class="dropdown-item smooth-scroll" routerLink="/" fragment="skill" [state]="{data: 'Sobre mí'}" (click)="closeMenu()">HABILIDADES</a>
+                  <a class="dropdown-item smooth-scroll" routerLink="/" fragment="skill" [state]="{data: 'Habilidades'}" (click)="closeMenu()">HABILIDADES</a>
                 </li>
               </ul>
             </li>            
@@ -63,7 +63,7 @@
               <li class="nav-item dropdown" [class.show]="isDropdownCoursesOpen">
               <a 
                 class="nav-link dropdown-toggle" 
-                routerLink="/courses" 
+                routerLink="/cursos" 
                 [state]="{data: 'Capacitaciones'}" 
                 id="sobreMiDropdown" 
                 role="button" 
@@ -75,15 +75,15 @@
               </a>
               <ul class="dropdown-menu {{ isOnTop ? '' : 'no-on-top' }}" [class.show]="isDropdownCoursesOpen" aria-labelledby="sobreMiDropdown">
                 <li>
-                  <a class="dropdown-item smooth-scroll" routerLink="/courses" fragment="sence-courses" [state]="{data: 'Cursos SENCE'}" (click)="closeMenu()">BOOTCAMPS SENCE</a>
+                  <a class="dropdown-item smooth-scroll" routerLink="/cursos" fragment="sence-courses" [state]="{data: 'Cursos SENCE'}" (click)="closeMenu()">BOOTCAMPS SENCE</a>
                 </li>
                 <li>
-                  <a class="dropdown-item smooth-scroll" routerLink="/courses" fragment="other-courses" [state]="{data: 'Otros Cursos'}" (click)="closeMenu()">OTROS CURSOS</a>
+                  <a class="dropdown-item smooth-scroll" routerLink="/cursos" fragment="other-courses" [state]="{data: 'Otros Cursos'}" (click)="closeMenu()">OTROS CURSOS</a>
                 </li>
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link smooth-scroll" href="#contact" (click)="closeMenu()">Contacto</a>
+              <a class="nav-link smooth-scroll" routerLink="/contacto" [state]="{data: 'Contacto'}" (click)="closeMenu()">Contacto</a>
             </li>
           </ul>
         </div>

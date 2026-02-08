@@ -3,11 +3,13 @@ import { Home } from './pages/home/home';
 import { Education } from './pages/education/education';
 import { WorkExperience } from './pages/work-experience/work-experience';
 import { Courses } from './pages/courses/courses';
+import { Contact } from './pages/contact/contact';
 
 export const routes: Routes = [
   {path: '', component: Home},
   {path: 'educacion', component: Education},
   {path: 'experiencia', component: WorkExperience},
-  {path: 'courses', component: Courses},
+  {path: 'cursos', component: Courses},
+  {path: 'contacto', component: Contact},
   {path: '**', redirectTo: ''}
 ];
