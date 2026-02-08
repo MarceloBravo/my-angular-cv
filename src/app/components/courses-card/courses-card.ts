@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { SenceCoursesInterface } from '../../interface/sence-courses-interface';
 import AOS from 'aos';
+import { OtherCoursesInterface } from '../../interface/other-courses-interface';
 
 @Component({
   selector: 'app-courses-card',
@@ -9,13 +10,13 @@ import AOS from 'aos';
   styleUrl: './courses-card.scss',
 })
 export class CoursesCard implements OnInit {
-  @Input() data: SenceCoursesInterface = {
+  @Input() data: OtherCoursesInterface = {
       image: '',
-      label: '',
-      institute: '',
+      institution: '',
       name: '',
       lblEndDate: '',
-      lblDuration: ''
+      lblDuration: '',
+      url: ''
   }
 
   ngOnInit(): void {

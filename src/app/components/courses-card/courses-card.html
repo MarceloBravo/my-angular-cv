@@ -1,21 +1,14 @@
 <div class="card-courses-container">
-    <div class="card-courses card-courses-sence">
-        <div class="card-courses-back">
-            <a href="{{data.image}}"
-                target="_blank">
-                <img 
-                    src="{{data.image}}"
-                    alt="Imagen"/>
-                <p>{{data.label}}</p>
-            </a>
+    <div class="card-courses">
+        <div class="card-courses-front">
+            <img src="../assets/images/certificados/{{data.image}}" alt="Imagen" />
         </div>
-        <div class="card-courses-front sence-front">
+        <div class="card-courses-back">
             <div class="row row-card-courses">
-                <label><b>{{data.institute}}</b></label>
-                <label>{{data.name}}</label>
-                <label>{{data.lblEndDate}}</label>
-                <label>{{data.lblDuration}}</label>
-
+                <p><b>{{data.institution}}</b></p>
+                <p>{{data.lblEndDate}}</p>
+                <p>{{data.lblDuration}}</p>
+                <p><a href="{{data.url}}" target="_blank">Ver certificado</a></p>
             </div>
         </div>
     </div>
