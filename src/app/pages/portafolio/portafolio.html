@@ -1,0 +1,24 @@
+<div class="section" id="portfolio">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 ml-auto mr-auto">
+                <div class="h4 text-center mb-4 title">Portafolio</div>
+            </div>
+        </div>
+        @for(portfolio of portafolio; track $index) {
+        <app-portfolio-card [portfolio]="portfolio"
+            [orientation]="$index % 2 === 0 ? Orientation.right : Orientation.left"></app-portfolio-card>
+        }
+    </div>
+</div>
+
+<br>
+<div class="row app-description">
+    <div class="card obs-info" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+        <div>
+            <b>Nota: </b> Los códigos fuentes de éstas y otras aplicaciones pueden ser descargados desde mi repositorio
+            de <span> <a href="https://github.com/MarceloBravo" target="blank">github</a></span>
+        </div>
+    </div>
+
+</div>

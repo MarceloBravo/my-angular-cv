@@ -1,0 +1,4 @@
+export enum Orientation {
+    right = 0,
+    left = 1
+}

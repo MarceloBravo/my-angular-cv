@@ -1,0 +1,104 @@
+@if(orientation == Orientation.right) {
+
+<div class="tab-content gallery mt-5">
+    <div class="tab-pane active" id="web-development">
+        <div class="ml-auto mr-auto">
+            <div class="row">
+                <h4 class="subtitulo-portafolio">{{ portfolio.title }}</h4>
+
+                <div class="col-md-6">
+
+                    <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+                        <a href="{{ portfolio.link }}">
+                            @if(portfolio.video) {
+                            <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
+                                <video controls playsinline class="demo-video">
+                                    <source src="{{ portfolio.video }}" type="video/mp4">
+                                    Tu navegador no soporta el elemento de video.
+                                </video>
+                            </div>
+                            } @else {
+                            <figure class="cc-effect">
+                                <img src="../assets/images/{{ portfolio.image }}" alt="Image" />
+                                <figcaption id="app1-6">
+                                    <div class="h4">{{ portfolio.mouse_move_title }}</div>
+                                    <p>{{ portfolio.mouse_move_description }}</p>
+                                </figcaption>
+                            </figure>
+                            }
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="col-md-6">
+                    @for(description of portfolio.description; track $index) {
+                    <p>
+                        {{ description }}
+                    </p>
+                    }
+                </div>
+
+            </div>
+            @if(portfolio.paragraph) {
+                <p>{{ portfolio.paragraph }}</p>
+            }
+
+        </div>
+    </div>
+</div>
+
+} @else {
+
+<div class="tab-content gallery mt-5">
+    <div class="tab-pane active" id="web-development">
+        <div class="ml-auto mr-auto">
+            <div class="row">
+                <h4 class="subtitulo-portafolio">{{ portfolio.title }}</h4>
+
+                <div class="col-md-6">
+                    @for(description of portfolio.description; track $index) {
+                        <p>
+                            {{ description }}
+                        </p>
+                    }
+                </div>
+
+
+                <div class="col-md-6">
+                    <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+                        <a href="{{ portfolio.link }}">
+                            
+                            @if(portfolio.video) {
+                                <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;"> 
+                                    <video controls playsinline class="demo-video">
+                                        <source src="{{ portfolio.video }}" type="video/mp4">
+                                        Tu navegador no soporta el elemento de video.
+                                    </video>
+
+                                </div>
+                            } @else {
+
+                                <figure class="cc-effect"><img src="../assets/images/{{ portfolio.image }}" alt="Image" />
+                                    <figcaption id="app1-3">
+                                        <div class="h4">{{ portfolio.mouse_move_title }}</div>
+                                        <p>{{ portfolio.mouse_move_description }}</p>
+                                    </figcaption>
+                                </figure>
+                            }
+
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+            @if(portfolio.paragraph) {
+                <p>{{ portfolio.paragraph }}</p>
+            }
+
+        </div>
+
+    </div>
+</div>
+
+}
