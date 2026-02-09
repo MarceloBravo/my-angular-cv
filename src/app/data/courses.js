@@ -5,7 +5,7 @@ export const cursosSence = [
         institute: 'SENCE - Talento Digital - Adalid',
         name: 'Bootcamp - Fundamentos DevOps',
         lblEndDate: 'Fecha: 01 de Agosto de 2025',
-        lblDuration: 'Duración: 180 horas'
+        lblDuration: '180'
     },
     {
         image: 'bootcamp - Desarrollador de aplicaciones front-end trainee.png',
@@ -13,7 +13,7 @@ export const cursosSence = [
         institute: 'SENCE - Talento Digital - Voltaire',
         name: 'Bootcamp - Desarrollador de aplicaciones front-end trainee con Vue.js',
         lblEndDate: 'Fecha: 22 de Agosto de 2022',
-        lblDuration: 'Duración: 438 horas'
+        lblDuration: '438'
     },
     {
         image: 'Bootcamp - Diseño y desarrollo de videojuegos.png',
@@ -21,7 +21,7 @@ export const cursosSence = [
         institute: 'SENCE - Talento Digital - Inforcap',
         name: 'Bootcamp - Diseño, desarrollo y programación página web aplicaciones moviles y videojuegos',
         lblEndDate: 'Fecha: 16 de Julio de 2021',
-        lblDuration: 'Duración: 400 horas'
+        lblDuration: '400'
     },
     {
         image: 'tecnicas de trabajo en euipo.png',
@@ -29,7 +29,7 @@ export const cursosSence = [
         institute: 'SENCE - Fundación Crate',
         name: 'Técnicas de trabajo en equipo y Seguridad Laboral',
         lblEndDate: 'Fecha: 25 de Abril 2020',
-        lblDuration: 'Duración: 08 horas'
+        lblDuration: '08'
     },
     {
         image: 'sence - diseno web con html.png',
@@ -37,7 +37,7 @@ export const cursosSence = [
         institute: 'SENCE - Fundación Telefónica',
         name: 'Diseño web con HTML 5 + CSS Ed5',
         lblEndDate: 'Fecha: 25 de Abril 2020',
-        lblDuration: 'Duración: 30 horas'
+        lblDuration: '30'
     },
     {
         image: 'curador de datos.png',
@@ -45,7 +45,7 @@ export const cursosSence = [
         institute: 'SENCE - ´Fundación Carlos Slim',
         name: 'Curador de datos',
         lblEndDate: 'Fecha: 22 de Abril de 2020',
-        lblDuration: 'Duración: 30 horas'
+        lblDuration: '30'
     },
 ]
 
@@ -55,7 +55,7 @@ export const otrosCursos = [
         institution: 'Udemy',
         name: 'React js aprende a crear un proyecto con webpack y babel',
         lblEndDate: 'Fecha: 25 de Mayo de 2024',
-        lblDuration: 'Duración: 2.5 horas',
+        lblDuration: '2.5',
         url: 'https://www.udemy.com/certificate/UC-373702bc-abef-435d-9668-ca694b3b494a/'
     },
     {
@@ -63,7 +63,7 @@ export const otrosCursos = [
         institution: 'Udemy',
         name: 'React desde cero',
         lblEndDate: 'Fecha: 31 de Julio de 2024',
-        lblDuration: 'Duración: 34.5 horas',
+        lblDuration: '34.5',
         url: 'https://www.udemy.com/certificate/UC-e3e468d7-21ef-479d-9615-5f9b92d90725/'
     },
     {
@@ -71,7 +71,7 @@ export const otrosCursos = [
         institution: 'Udemy',
         name: 'Phyton desde principiante hasta nivel ingeniería',
         lblEndDate: 'Fecha: 27 de Septiembre 2024',
-        lblDuration: 'Duración: 13 horas',
+        lblDuration: '13',
         url: 'https://www.udemy.com/certificate/UC-700d885c-5f0a-4640-9648-59fb580f8b30/'
     },
     {
@@ -79,7 +79,7 @@ export const otrosCursos = [
         institution: 'Udemy',
         name: 'Aprende phyton desde cero',
         lblEndDate: 'Fecha: 16 de Septiembre 2024',
-        lblDuration: 'Duración: 04 horas',
+        lblDuration: '04',
         url: 'https://www.udemy.com/certificate/UC-67d84387-946a-4c53-931c-4c7c5182da3d/'
     },
     {
@@ -87,7 +87,7 @@ export const otrosCursos = [
         institution: 'Udemy',
         name: 'Microfrontend con React: Arquitectura de aplicaciones web escalables',
         lblEndDate: 'Fecha: 12 de Mayo de 2024',
-        lblDuration: 'Duración: 14 horas',
+        lblDuration: '14',
         url: 'https://www.udemy.com/certificate/UC-c6f55cd8-9e6b-4b79-9a70-19f74fd19458/'
     },
     {
@@ -95,7 +95,7 @@ export const otrosCursos = [
         institution: 'Udemy',
         name: 'Introcucción a React Native con React Navigation y Axios',
         lblEndDate: 'Fecha: 07 de Abril 2020',
-        lblDuration: 'Duración: 2.5 horas',
+        lblDuration: '2.5',
         url: 'https://www.udemy.com/certificate/UC-0b972d8c-6b7c-4164-9c75-e26e432b8f5e/'
     },
     {
@@ -103,7 +103,7 @@ export const otrosCursos = [
         institution: 'Udemy',
         name: 'React Hooks - Guía Inicial utilizando Redux y Material UI',
         lblEndDate: 'Fecha: 24 de Marzo 2020',
-        lblDuration: 'Duración: 1.5 horas',
+        lblDuration: '1.5',
         url: 'https://www.udemy.com/certificate/UC-184edf22-e363-4418-a1b6-4e510b77cd78/'
     },
     {
@@ -111,7 +111,7 @@ export const otrosCursos = [
         institution: 'Udemy',
         name: 'JavaScript ES6',
         lblEndDate: 'Fecha: 17 de Marzo de 2020',
-        lblDuration: 'Duración: 03 horas',
+        lblDuration: '03',
         url: 'https://www.udemy.com/certificate/UC-56c1b02c-4874-4e2d-874b-6d329b6c7b4a/'
     },
     {
@@ -119,7 +119,7 @@ export const otrosCursos = [
         institution: 'Udemy',
         name: 'Aprende React JS',
         lblEndDate: 'Fecha: 27 de Febrero 2020',
-        lblDuration: 'Duración: 5.5 horas',
+        lblDuration: '5.5',
         url: 'https://www.udemy.com/certificate/UC-7e93ed7b-7548-4ea7-adfd-4c76f5c8f5dc/'
     },
     {
@@ -127,7 +127,7 @@ export const otrosCursos = [
         institution: 'Udemy',
         name: 'React js - Inicia en el mundo de los frameworks de javascrypt',
         lblEndDate: 'Fecha: 2O de Febrero 2020',
-        lblDuration: 'Duración: 2.5 horas',
+        lblDuration: '2.5',
         url: 'https://www.udemy.com/certificate/UC-ee799884-159e-4548-81a7-dbeb60664cf9/'
     },
     {
@@ -135,7 +135,7 @@ export const otrosCursos = [
         institution: 'Universidad Austral - Coursera',
         name: 'Desarrollo de páginas con Angular',
         lblEndDate: 'Fecha: 20 de Julio de 2020',
-        lblDuration: 'Duración: 21 horas',
+        lblDuration: '21',
         url: 'https://www.coursera.org/account/accomplishments/verify/33UW886ZCMFP'
     },
     {
@@ -143,7 +143,7 @@ export const otrosCursos = [
         institution: 'Universidad Austral - Coursera',
         name: 'Diseño de paginas web con bootstrap 4',
         lblEndDate: 'Fecha: 09 de Julio 2020',
-        lblDuration: 'Duración: 20 horas',
+        lblDuration: '20',
         url: 'https://www.coursera.org/account/accomplishments/verify/L8T7NN5LVEWS'
     },
     {
@@ -151,7 +151,7 @@ export const otrosCursos = [
         institution: 'Universidad Austral - Coursera',
         name: 'Desarrollo de aplicaciones web multiplataforma con Nativescript, Angular y Redux',
         lblEndDate: 'Fecha: 16 de Agosto de 2020',
-        lblDuration: 'Duración: 22 horas',
+        lblDuration: '22',
         url: 'https://www.coursera.org/account/accomplishments/verify/XSXYSGWDX8S2'
     },
     {
@@ -159,7 +159,7 @@ export const otrosCursos = [
         institution: 'Udemy',
         name: 'Aprende a dominar GIT desde Cero',
         lblEndDate: 'Fecha: 17 de Diciembre de 2019',
-        lblDuration: 'Duración: 03 horas',
+        lblDuration: '03',
         url: 'https://www.udemy.com/certificate/UC-TDNUXAPO/'
     },
     {
@@ -191,7 +191,7 @@ export const otrosCursos = [
         institution: 'Udemy',
         name: 'Crea sistema de juegos en línea con HTML5, Canvas y PHP 7',
         lblEndDate: 'Fecha: 13 de Abril 2019',
-        lblDuration: 'Duración: 20.5 horas',
+        lblDuration: '20.5',
         url: 'https://www.udemy.com/certificate/UC-OWR0EM9X/'
     },
     {
@@ -199,7 +199,7 @@ export const otrosCursos = [
         institution: 'Udemy',
         name: 'Convierte cualquier template HTML en una WebApp con Angular',
         lblEndDate: 'Fecha: 03 de Abril 2019',
-        lblDuration: 'Duración: 3.5 horas',
+        lblDuration: '3.5',
         url: 'https://www.udemy.com/certificate/UC-HHLVCNTE/'
     },
     {
@@ -207,7 +207,7 @@ export const otrosCursos = [
         institution: 'Edutin',
         name: 'Laravel 5',
         lblEndDate: 'Fecha: 07 de Mayo de 2019',
-        lblDuration: 'Duración: 06 horas',
+        lblDuration: '06',
         url: null
     },
     {
@@ -215,7 +215,7 @@ export const otrosCursos = [
         institution: 'CFT San Agustin de Talca',
         name: 'Introducción a las metodologías ágiles SCRUM y KANBAN',
         lblEndDate: 'Fecha: Noviembre de 2021',
-        lblDuration: 'Duración: 20 horas',
+        lblDuration: '20',
         url: null
     },
 ]

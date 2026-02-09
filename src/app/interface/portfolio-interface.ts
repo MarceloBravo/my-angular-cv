@@ -4,7 +4,7 @@ export interface PortfolioInterface {
     video: String | null,
     mouse_move_title: String,
     mouse_move_description: String,
-    description: String[],
-    paragraph: String | null,
+    description: string[],
+    paragraph: string | null,
     link: String | null
 }

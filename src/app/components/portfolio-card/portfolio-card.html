@@ -32,16 +32,14 @@
                 </div>
 
                 <div class="col-md-6">
-                    @for(description of portfolio.description; track $index) {
-                    <p>
-                        {{ description }}
-                    </p>
+                    @for(description of descriptionsSanitized; track $index) {
+                        <p [innerHTML]="description"></p>
                     }
                 </div>
 
             </div>
-            @if(portfolio.paragraph) {
-                <p>{{ portfolio.paragraph }}</p>
+            @if(paragraphSanitized) {
+                <p [innerHTML]="paragraphSanitized"></p>
             }
 
         </div>
@@ -57,10 +55,8 @@
                 <h4 class="subtitulo-portafolio">{{ portfolio.title }}</h4>
 
                 <div class="col-md-6">
-                    @for(description of portfolio.description; track $index) {
-                        <p>
-                            {{ description }}
-                        </p>
+                    @for(description of descriptionsSanitized; track $index) {
+                        <p [innerHTML]="description"></p>
                     }
                 </div>
 
@@ -92,8 +88,8 @@
                 </div>
 
             </div>
-            @if(portfolio.paragraph) {
-                <p>{{ portfolio.paragraph }}</p>
+            @if(paragraphSanitized) {
+                <p [innerHTML]="paragraphSanitized"></p>
             }
 
         </div>
