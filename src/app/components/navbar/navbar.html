@@ -7,7 +7,7 @@
     >
       <div class="container">
         <div class="navbar-translate" >
-          <a class="navbar-brand" routerLink="/" [state]="{data: 'Marcelo Bravo'}" rel="tooltip">Marcelo Bravo</a>
+          <a class="navbar-brand" routerLink="/" [state]="{data: 'Marcelo Bravo'}" rel="tooltip">Marcelo Bravo<img src='../../assets/icons/metricas-50.png' alt='Profile' style="width: 30px; height: 30px; margin-left: 5px;"></a>
           <button
             class="navbar-toggler navbar-toggler"
             type="button"
@@ -31,14 +31,14 @@
               <a 
                 class="nav-link dropdown-toggle" 
                 routerLink="/" 
-                [state]="{data: 'Home'}" 
+                [state]="{data: 'Quén soy'}" 
                 id="sobreMiDropdown" 
                 role="button" 
                 (click)="toggleDropdownHome($event)"
                 aria-haspopup="true" 
                 [attr.aria-expanded]="isDropdownHomeOpen"
               >
-                INICIO
+                Quén soy
               </a>
               <ul class="dropdown-menu {{ isOnTop ? '' : 'no-on-top' }}" [class.show]="isDropdownHomeOpen" aria-labelledby="sobreMiDropdown">
                 <li>

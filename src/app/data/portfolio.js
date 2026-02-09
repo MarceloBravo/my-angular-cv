@@ -61,7 +61,7 @@ export const portfolio = [
     {
         title: 'Tienda online desarrollada en Angular, Laravel y Mysql',
         image: null,
-        video: 'videos/tienda-angular-laravel.mp4',
+        video: 'https://marcelo-antonio-bravo-castillo.netlify.app/videos/tienda-angular-laravel.mp4',
         mouse_move_title: null,
         mouse_move_description: null,
         description: [
@@ -74,7 +74,7 @@ export const portfolio = [
     {
         title: 'Tienda online desarrollada en React, Node y Mysql',
         image: null,
-        video: 'videos/tienda-react-node.mp4',
+        video: 'https://marcelo-antonio-bravo-castillo.netlify.app/videos/tienda-react-node.mp4',
         mouse_move_title: null,
         mouse_move_description: null,
         description: [
