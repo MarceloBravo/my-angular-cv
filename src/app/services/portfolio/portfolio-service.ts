@@ -6,9 +6,9 @@ import { portfolio } from '../../data/portfolio';
 @Injectable({
   providedIn: 'root',
 })
-export class Portfolio {
+export class PortfolioService {
 
-  getPortfolio(): PortfolioInterface[] {
+  getPortfolio(): PortfolioInterface[]{
     return portfolio;
   }
   

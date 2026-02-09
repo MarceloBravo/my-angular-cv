@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { PortfolioInterface } from '../../interface/portfolio-interface';
-import { Portfolio as PortfolioService } from '../../services/portfolio/portfolio';
+import { PortfolioService } from '../../services/portfolio/portfolio-service';
 import { PortfolioCard } from '../../components/portfolio-card/portfolio-card';
 import { Orientation } from '../../enum/orientation';
 
