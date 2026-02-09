@@ -1,8 +1,9 @@
 export interface OtherCoursesInterface {
-    image: String,
-    institution: String,
-    name: String,
-    lblEndDate: String,
-    lblDuration: String | null,
-    url: String | null
+    image: string,
+    institution: string,
+    name: string,
+    lblEndDate: string,
+    lblDuration: string | null,
+    url: string | null,
+    contents: string[]
 }

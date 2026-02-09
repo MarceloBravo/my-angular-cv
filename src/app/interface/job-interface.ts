@@ -1,6 +1,8 @@
 export interface JobInterface {
-    years: String,
-    company: String,
-    position: String,
-    description: String
+    years: string;
+    company: string;
+    position: string;
+    description: string;
+    tecnologies: string[];
+    category: 'frontend' | 'backend' | 'fullstack' | 'desktop' | 'freelance';
 }
