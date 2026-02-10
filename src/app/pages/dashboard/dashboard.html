@@ -1,0 +1,12 @@
+<div class="dashboard-container">
+
+<app-bar-horizontal-graph 
+  [data]="skillsChartData" 
+  [labelY]="'Tecnologías'" 
+  [labelX]="'Cantidad de cursos'"
+  [title]="'Tecnologías incluidas en los cursos'"
+/>
+
+<app-pie-chart-graph [data]="experienciaChartData" [title]="'Meses por empresa'"/>
+
+</div>

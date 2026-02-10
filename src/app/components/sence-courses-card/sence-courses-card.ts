@@ -15,7 +15,8 @@ export class SenceCoursesCard implements OnInit {
       institute: '',
       name: '',
       lblEndDate: '',
-      lblDuration: ''
+      lblDuration: '',
+      contents: []
   }
 
   ngOnInit(): void {

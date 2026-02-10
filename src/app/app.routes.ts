@@ -5,9 +5,11 @@ import { WorkExperience } from './pages/work-experience/work-experience';
 import { Courses } from './pages/courses/courses';
 import { Contact } from './pages/contact/contact';
 import { Portafolio } from './pages/portafolio/portafolio';
+import { Dashboard } from './pages/dashboard/dashboard';
 
 export const routes: Routes = [
-  {path: '', component: Home},
+  {path: '', component: Dashboard},
+  {path: 'about', component: Home},
   {path: 'educacion', component: Education},
   {path: 'portafolio', component: Portafolio},
   {path: 'experiencia', component: WorkExperience},

@@ -30,7 +30,7 @@
             <li class="nav-item dropdown" [class.show]="isDropdownHomeOpen">
               <a 
                 class="nav-link dropdown-toggle" 
-                routerLink="/" 
+                routerLink="/about" 
                 [state]="{data: 'Quén soy'}" 
                 id="sobreMiDropdown" 
                 role="button" 
@@ -42,10 +42,10 @@
               </a>
               <ul class="dropdown-menu {{ isOnTop ? '' : 'no-on-top' }}" [class.show]="isDropdownHomeOpen" aria-labelledby="sobreMiDropdown">
                 <li>
-                  <a class="dropdown-item smooth-scroll" routerLink="/" fragment="about" [state]="{data: 'Sobre mí'}" (click)="closeMenu()">SOBRE MÍ</a>
+                  <a class="dropdown-item smooth-scroll" routerLink="/about" fragment="about" [state]="{data: 'Sobre mí'}" (click)="closeMenu()">SOBRE MÍ</a>
                 </li>
                 <li>
-                  <a class="dropdown-item smooth-scroll" routerLink="/" fragment="skill" [state]="{data: 'Habilidades'}" (click)="closeMenu()">HABILIDADES</a>
+                  <a class="dropdown-item smooth-scroll" routerLink="/about" fragment="skill" [state]="{data: 'Habilidades'}" (click)="closeMenu()">HABILIDADES</a>
                 </li>
               </ul>
             </li>            

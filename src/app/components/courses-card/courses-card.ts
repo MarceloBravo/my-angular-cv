@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { SenceCoursesInterface } from '../../interface/sence-courses-interface';
 import AOS from 'aos';
 import { OtherCoursesInterface } from '../../interface/other-courses-interface';
+import { DateUtilsService } from '../../services/date-utils.service';
 
 @Component({
   selector: 'app-courses-card',
@@ -16,7 +17,13 @@ export class CoursesCard implements OnInit {
       name: '',
       lblEndDate: '',
       lblDuration: '',
-      url: ''
+      url: '',
+      contents: []
+  }
+  dateUtils: DateUtilsService | null = null;
+
+  constructor(private dateUtilsService: DateUtilsService) {
+    this.dateUtils = this.dateUtilsService;
   }
 
   ngOnInit(): void {

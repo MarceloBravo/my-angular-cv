@@ -3,9 +3,17 @@ import { CursoProcesado } from '../../interface/curso-procesado';
 import { Experiencia } from '../../interface/experiencia';
 import { SenceCoursesInterface } from '../../interface/sence-courses-interface';
 import { OtherCoursesInterface } from '../../interface/other-courses-interface';
+import { DateUtilsService } from '../date-utils.service';
+// @ts-ignore
+import { cursosSence, otrosCursos } from '../../data/courses.js';
+// @ts-ignore
+import { jobs } from '../../data/jobs.js'
+// @ts-ignore
+import { data as skills } from '../../data/skills.js'
 import { JobInterface } from '../../interface/job-interface';
 import { Skills } from '../../interface/skills';
 import { SkillCategorizado } from '../../interface/skill-categorizado';
+import { PortfolioInterface } from '../../interface/portfolio-interface';
 // @ts-ignore
 import { cursosSence, otrosCursos } from '../../data/courses.js';
 // @ts-ignore
@@ -14,12 +22,13 @@ import { jobs } from '../../data/jobs.js'
 import { data as skills } from '../../data/skills.js'
 // @ts-ignore
 import { portfolio } from '../../data/portfolio.js'
-import { PortfolioInterface } from '../../interface/portfolio-interface';
 
 @Injectable({
   providedIn: 'root',
 })
 export class DashboardDataService {
+  
+  constructor(private dateUtils: DateUtilsService) {}
   
   transformarCursos(): CursoProcesado[]{
     let result: CursoProcesado[] = [];
@@ -29,9 +38,9 @@ export class DashboardDataService {
           nombre: item.name,
           plataforma: 'Sence',
           institucion_capacitadora: item.institute,
-          fecha: new Date(item.lblEndDate),
+          fecha: item.lblEndDate ? this.dateUtils.parseDDMMYYYY(item.lblEndDate) : null,
           duracion: parseFloat(item.lblDuration),
-          tecnologia: ['']
+          tecnologia: item.contents
         })
     });
 
@@ -40,12 +49,13 @@ export class DashboardDataService {
         nombre: item.name,
         plataforma: 'Sence',
         institucion_capacitadora: item.institution,
-        fecha: new Date(item.lblEndDate),
+        fecha: item.lblEndDate ? this.dateUtils.parseDDMMYYYY(item.lblEndDate) : null,
         duracion: item.lblDuration ? parseFloat(item.lblDuration) : 0,
-        tecnologia: ['']
+        tecnologia: item.contents
       })
     })
 
+    console.log('Cursos', result);
     return result;
   }
 
@@ -65,6 +75,7 @@ export class DashboardDataService {
       }
     });
 
+    console.log('tecnologías', tecnologias);
     return tecnologias;
   }
 
@@ -89,6 +100,7 @@ export class DashboardDataService {
       });
     });
     
+    console.log('Experiencia', result.sort((a, b) => b.anioExperiencia - a.anioExperiencia));
     return result.sort((a, b) => b.anioExperiencia - a.anioExperiencia);
   }
 
@@ -138,6 +150,7 @@ export class DashboardDataService {
       });
     });
     
+    console.log('Skills', skillsCategorizados);
     return skillsCategorizados;
   }
 
@@ -181,7 +194,7 @@ export class DashboardDataService {
     // Lógica para contar proyectos que usan este skill
     const result = portfolio.reduce((acumulador: number, item: PortfolioInterface) => {
       if(
-        item.description?.includes(nombreSkill.toLowerCase()) || 
+        item.description?.toString().toLowerCase().includes(nombreSkill.toLowerCase()) || 
         item.paragraph?.toLowerCase().includes(nombreSkill.toLowerCase())
       ){
         acumulador++;
@@ -195,14 +208,16 @@ export class DashboardDataService {
   private contarCursosConSkill(nombreSkill: string): number {
     // Lógica para contar cursos relacionados
     let result = cursosSence.reduce((acumulador: number, item: SenceCoursesInterface) => {
-      if(item.contents.includes(nombreSkill)){
+      const contents = item.contents.map((content: String) => content.toLowerCase());
+      if(contents.includes(nombreSkill.toLowerCase())){
         acumulador++;
       }
       return acumulador;
     }, 0);
 
     result += otrosCursos.reduce((acumulador: number, item: OtherCoursesInterface) => {
-      if(item.contents.includes(nombreSkill)){
+      const contents = item.contents.map((content: String) => content.toLocaleLowerCase());
+      if(contents.includes(nombreSkill.toLowerCase())){
         acumulador++;
       }
       return acumulador;
@@ -214,7 +229,7 @@ export class DashboardDataService {
   private calcularExperienciaConSkill(nombreSkill: string): number {
     // Lógica para calcular años de experiencia
     const result = jobs.reduce((acumulador: number, item: JobInterface) => {
-      if(item.tecnologies.includes(nombreSkill)){
+      if(item.tecnologies.toString().toLowerCase().includes(nombreSkill)){
         acumulador++;
       }
       return acumulador;

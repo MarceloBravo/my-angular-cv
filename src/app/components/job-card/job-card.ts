@@ -13,7 +13,9 @@ export class JobCard implements OnInit {
     years: '',
     company: '',
     position: '',
-    description: ''
+    description: '',
+    tecnologies: [],
+    category: 'fullstack'
   }
 
   ngOnInit(): void {
