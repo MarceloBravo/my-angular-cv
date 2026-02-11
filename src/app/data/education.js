@@ -3,14 +3,15 @@ export const education=[
         header: {
             years: '2024 - 2025',
             name: 'Diplomado en Phyton profesional',
-            image: 'puc.png'
+            image: 'puc.png'            
         },
         body: {
             title: 'Diplomado de Phyton profesional y Machine Learning',
             institution: 'Pontificia Universidad Católica de Chile',
-            description: 'El diplomado comprende los cursos de Phyton, Phyton y bases de datos, Django, y MachineLearning.'
+            description: 'El diplomado comprende los cursos de Phyton, Phyton y bases de datos, Django, y MachineLearning.',            
         },
-        styles: 'puc'
+        styles: 'puc',
+        short_title: 'Diplomado Python'
     },
     {
         header: {
@@ -23,7 +24,8 @@ export const education=[
             institution: 'Universidad Católica del Maule',
             description: 'Programa de prosecución de estudios para técnicos de nivel Superior en computación o Análisis de sistemas conducente al título de Ingeniero en ejecución en computación e Informática. Aprobado con Distinción'
         },
-        styles: 'ucm'
+        styles: 'ucm',
+        short_title: 'Ingeniería en Informática'
     },
     {
         header:{
@@ -36,7 +38,8 @@ export const education=[
             institution: 'Centro de Formación Técnica San Agustín de Talca',
             description: 'Cursado en la sede Talca del Centro de formación Técnica San Agustín de Talca. Aprobado con Distinción Máxima'
         },
-        styles: 'cft'
+        styles: 'cft',
+        short_title: 'Analista programador'
     },
     {
         header: {
@@ -49,7 +52,8 @@ export const education=[
             institution: 'Instituto Superior de Comercio (INSUCO TALCA)',
             description: 'Enseñanza Media Técnico Profesional conducente al título de Técnico Programador en Computación de Nivel Superior (Año de egreso 2005, año de Titulación 2009)'
         },
-        styles: 'insuco'
+        styles: 'insuco',
+        short_title: 'Técnico programador'
     },
     {
         header: {
@@ -62,6 +66,7 @@ export const education=[
             institution: 'Liceo Abate Molina TALCA',
             description: 'Licencia de Enseñanza Media Científico Humanista (Año de Egreso 1994).'
         },
-        styles: 'lam'
+        styles: 'lam',
+        short_title: 'Ensañanza mendia'
     }
 ];

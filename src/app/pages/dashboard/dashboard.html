@@ -4,9 +4,23 @@
   [data]="skillsChartData" 
   [labelY]="'Tecnologías'" 
   [labelX]="'Cantidad de cursos'"
-  [title]="'Tecnologías incluidas en los cursos'"
+  [title]="'Tecnologías incluidas en cursos'"
 />
 
-<app-pie-chart-graph [data]="experienciaChartData" [title]="'Meses por empresa'"/>
+<app-bar-horizontal-graph 
+  [data]="experienciaLaboralSkillsChartData" 
+  [labelY]="'Tecnologías'" 
+  [labelX]="'Meses de experiencia'"
+  [title]="'Experiencia laboral por técnologías'"
+/>
+
+<app-pie-chart-graph [data]="experienciaChartData" [title]="'Antiguedad por empresa (meses)'"/>
+
+<app-number-card 
+  [data]="horasPorCursoPieGridData" 
+  [title]="'Horas de Bootcamps y cursos por plataforma'"
+  />
+
+<app-andvanced-pie-chart-graph [data]="educFormalChartData" [title]="'Educación formal en años'"/>
 
 </div>

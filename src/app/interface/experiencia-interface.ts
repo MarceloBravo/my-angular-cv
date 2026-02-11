@@ -1,4 +1,4 @@
-export interface Experiencia {
+export interface ExperienciaInterface {
   empresa: string;
   posicion: string;
   fechaInicio: Date;

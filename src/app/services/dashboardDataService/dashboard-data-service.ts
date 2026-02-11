@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { CursoProcesado } from '../../interface/curso-procesado';
-import { Experiencia } from '../../interface/experiencia';
+import { ExperienciaInterface } from '../../interface/experiencia-interface';
 import { SenceCoursesInterface } from '../../interface/sence-courses-interface';
 import { OtherCoursesInterface } from '../../interface/other-courses-interface';
 import { DateUtilsService } from '../date-utils.service';
@@ -22,6 +22,7 @@ import { jobs } from '../../data/jobs.js'
 import { data as skills } from '../../data/skills.js'
 // @ts-ignore
 import { portfolio } from '../../data/portfolio.js'
+import { AniosEstudiosInterface } from '../../interface/anios-estudios-interface';
 
 @Injectable({
   providedIn: 'root',
@@ -79,8 +80,8 @@ export class DashboardDataService {
     return tecnologias;
   }
 
-  calcularExperiencia(): Experiencia[]{
-    let result: Experiencia[] = [];
+  calcularExperiencia(): ExperienciaInterface[]{
+    let result: ExperienciaInterface[] = [];
     
     jobs.forEach((job: JobInterface) => {
       // Parsear fechas desde el string "Enero 2025 - Mayo 2025"

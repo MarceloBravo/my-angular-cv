@@ -12,7 +12,7 @@ export const jobs = [
         company: 'NTT Data Chile',
         position: 'INGENIERO EN INFORMÁTICA DESARROLLADOR MAGENTO BACKOFFICE',
         description: 'Desarrollador de aplicaciones Web utilizando los frameworks de VueJs y Magento.',
-        tecnologies: ['Magento', 'VueJs', 'javascript', 'css', 'Git', 'GitHub','XML', 'Jenkins', 'Jira'],
+        tecnologies: ['Magento', 'VueJs', 'javascript', 'css', 'Git', 'GitHub','XML', 'Jenkins', 'Jira','PHP'],
         category: 'fullstack'
     },
     {

@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { DataEducation } from '../../class/data-education';
 // @ts-ignore
 import { education } from '../../data/education';
+import { AniosEstudiosInterface } from '../../interface/anios-estudios-interface';
 
 @Injectable({
   providedIn: 'root',
@@ -23,4 +24,22 @@ export class Education {
     });
     return data;
   }
+
+  aniosPorInstitucion(): AniosEstudiosInterface[]{
+    const data: AniosEstudiosInterface[] = education.map((item: any) => {
+      const desde = parseInt(item.header.years.split('-')[0]);
+      const hasta = parseInt(item.header.years.split('-')[1]);
+      return {
+        desde: desde, 
+        hasta: hasta, 
+        institucion: item.body.institution, 
+        duracion: hasta - desde, 
+        carrera: item.body.tittle,
+        label: item.short_title
+      }
+    });
+
+    return data;
+  }
+
 }
