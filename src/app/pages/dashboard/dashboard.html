@@ -14,7 +14,13 @@
 [title]="'Experiencia laboral por técnologías'"
 />
 
-<app-vertical-bar-graph [data]="horasTecnologiaCursoChartData" [title]="'Horas de capacitación por tecnología'"/>
+<app-vertical-bar-graph 
+  [data]="horasTecnologiaCursoChartData" 
+  [title]="'Horas de capacitación por tecnología'"
+  [subtitle]="'(No incluye Bootcamps)'"  
+  [yAxisLabel]="'Horas'"
+  [xAxisLabel]="'Técnología'"
+/>
 
 <app-number-card 
 [data]="horasPorPlataformaGraphData" 
@@ -23,9 +29,17 @@
 
 <app-pie-chart-graph [data]="experienciaChartData" [title]="'Antiguedad por empresa (meses)'"/>
 
-<app-andvanced-pie-chart-graph [data]="educFormalChartData" [title]="'Educación formal en años'" [subtitle]="'(Incluye Científico humanista)'"/>
+<app-andvanced-pie-chart-graph 
+  [data]="educFormalChartData" 
+  [title]="'Educación formal en años'" 
+  [subtitle]="'(Incluye Científico humanista)'"
+/>
 
-<app-pie-grid-graph [data]="experienciaPorActividadChartData" [title]="'Experiencia en programación por tipo de actividad en años'"  [subtitle]="'(Excluye Científico humanista)'"/>
+<app-pie-grid-graph 
+  [data]="experienciaPorActividadChartData" 
+  [title]="'Experiencia en programación por tipo de actividad en años'"  
+  [subtitle]="'(Excluye Científico humanista)'"
+/>
 
 
 </div>

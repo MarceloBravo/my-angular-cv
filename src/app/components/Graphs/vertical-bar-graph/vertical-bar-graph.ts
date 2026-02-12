@@ -11,6 +11,8 @@ export class VerticalBarGraph {
   @Input() data: any[] = [];
   @Input() title: string = '';
   @Input() subtitle: string = '';
+  @Input() xAxisLabel: string = 'Country';
+  @Input() yAxisLabel: string = 'Population';
   view: [number, number] = [700, 400];
 
   // options
@@ -19,9 +21,7 @@ export class VerticalBarGraph {
   gradient = false;
   showLegend = true;
   showXAxisLabel = true;
-  xAxisLabel = 'Country';
   showYAxisLabel = true;
-  yAxisLabel = 'Population';
 
   colorScheme = 'cool';
 
