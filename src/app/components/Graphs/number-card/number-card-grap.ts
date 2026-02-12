@@ -10,6 +10,7 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
 export class NumberCardGraph {
   @Input() data: any[] = [];
   @Input() title: string = '';
+  @Input() subtitle: string = '';
   @Output() onClick = new EventEmitter<string>()
   view: [number, number] = [600, 300];
 

@@ -13,6 +13,8 @@ import { Courses as CoursesServices } from '../../services/courses/courses';
 import { Education } from '../../services/education/education';
 import { AniosEstudiosInterface } from '../../interface/anios-estudios-interface';
 import { PieGridGraph } from '../../components/Graphs/pie-grid-graph/pie-grid-graph';
+import { SenceCoursesInterface } from '../../interface/sence-courses-interface';
+import { VerticalBarGraph } from '../../components/Graphs/vertical-bar-graph/vertical-bar-graph';
 
 @Component({
   selector: 'app-dashboard',
@@ -22,7 +24,8 @@ import { PieGridGraph } from '../../components/Graphs/pie-grid-graph/pie-grid-gr
       PieChartGraph, 
       NumberCardGraph, 
       AndvancedPieChartGraph, 
-      PieGridGraph
+      PieGridGraph,
+      VerticalBarGraph
     ],
   templateUrl: './dashboard.html',
   styleUrl: './dashboard.scss',
@@ -30,10 +33,11 @@ import { PieGridGraph } from '../../components/Graphs/pie-grid-graph/pie-grid-gr
 export class Dashboard implements OnInit {
   public skillsChartData: any[] = []; 
   public experienciaChartData: any[] = [];
-  public horasPorCursoPieGridData: any[] = [];
+  public horasPorPlataformaGraphData: any[] = [];
   public educFormalChartData: any[] = [];
   public experienciaLaboralSkillsChartData: any[] = [];
-  public experienciaPorActividadChartData: any[] = []
+  public experienciaPorActividadChartData: any[] = [];
+  public horasTecnologiaCursoChartData: ItemGraphInterface[] = [];
 
   // Configuraciones de gráficos
   public skillsChartOptions: any = {}
@@ -66,22 +70,45 @@ export class Dashboard implements OnInit {
     this.experienciaData = this.dashboardService.calcularExperiencia();
     this.cursosData = this.dashboardService.transformarCursos();
 
+    this.datosCursosPorTecnologia();
 
-    this.DatosCursosPorTecnologia();
+    this.datosExperienciaLaboral();
 
-    this.DatosExperienciaLaboral();
-
-    this.horasDeCapacitacionPorCurso();
+    this.horasDeCapacitaconPorPlataforma();
 
     this.datosEducacionFormal();
 
     this.experienciaLaboralSkills();
 
     this.experienciaPorActividad();
-    
+
+    this.datosHorasTecnologiaCurso();
   }
 
-  private DatosCursosPorTecnologia(): void{
+  private datosHorasTecnologiaCurso(): void{
+    const temporalResult: ItemGraphInterface[] = [];
+    const arrTecnologiasHoras: {name: string[], value: number, plataforma: string}[] = this.cursosData.map((elem: CursoProcesado) => {
+      return {
+        name: elem.tecnologia,
+        value: elem.duracion,
+        plataforma: elem.plataforma
+      };
+    }).filter((item: {name: string[], value: number, plataforma: string}) => item.plataforma !== 'Sence');
+    arrTecnologiasHoras.forEach((item: {name: string[], value: number}) => {
+      item.name.forEach((elem: string) => {
+        if(temporalResult.find((item: ItemGraphInterface) => item.name.toLowerCase() === elem.toLowerCase())){
+          temporalResult.find((item: ItemGraphInterface) => item.name.toLowerCase() === elem.toLowerCase())!.value += item.value;
+        }else{
+          temporalResult.push({name: elem, value: item.value});
+        }
+      })
+    })  
+    this.horasTecnologiaCursoChartData = temporalResult.sort((a, b) => b.value - a.value).filter((_,index: number) => index < 20);
+  
+    console.log('Horas por tecnología', this.horasTecnologiaCursoChartData)
+  }
+
+  private datosCursosPorTecnologia(): void{
     this.skillsChartData = this.skillsData.map((elem: any) => {
       return {
         name: elem.nombre,
@@ -91,7 +118,7 @@ export class Dashboard implements OnInit {
     .sort((a, b) => b.value - a.value);
   }
 
-  private DatosExperienciaLaboral(): void{
+  private datosExperienciaLaboral(): void{
     this.experienciaChartData = this.experienciaData.map((elem: any) => {
       return {
         name: elem.empresa,
@@ -117,7 +144,7 @@ export class Dashboard implements OnInit {
     this.experienciaLaboralSkillsChartData = tecnologias.sort((a, b) => b.value - a.value).filter((item: ItemGraphInterface, index: number) => index < 15);
   }
 
-  private horasDeCapacitacionPorCurso(): void{
+  private horasDeCapacitaconPorPlataforma(): void{
     const horasPorInstitucion = this.cursosData.map((item: CursoProcesado) => {
       return {
         name: item.institucion_capacitadora.includes('SENCE - Talento Digital') ? 'SENCE - Talento Digital': item.institucion_capacitadora,
@@ -133,10 +160,10 @@ export class Dashboard implements OnInit {
       return acum;
     }, {} as any)
     
-    this.horasPorCursoPieGridData = Object.keys(horasPorInstitucion).map((item: string) => {
+    this.horasPorPlataformaGraphData = Object.keys(horasPorInstitucion).map((item: string) => {
       return {name: item, value: horasPorInstitucion[item].value, extra: horasPorInstitucion[item].extra}
     }).filter((item: ItemGraphInterface) => item.value > 0)
-    console.log('Pie Grid Data',this.horasPorCursoPieGridData)
+    console.log('Pie Grid Data',this.horasPorPlataformaGraphData)
   }
 
   private datosEducacionFormal(): void{
@@ -175,4 +202,5 @@ export class Dashboard implements OnInit {
     this.experienciaPorActividadChartData = data;
   }
 }
+
 

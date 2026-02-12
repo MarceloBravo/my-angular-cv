@@ -4,25 +4,28 @@
   [data]="skillsChartData" 
   [labelY]="'Tecnologías'" 
   [labelX]="'Cantidad de cursos'"
-  [title]="'Tecnologías incluidas en cursos'"
+  [title]="'Cantidad de cursos por tecnología'"
 />
 
 <app-bar-horizontal-graph 
-  [data]="experienciaLaboralSkillsChartData" 
-  [labelY]="'Tecnologías'" 
-  [labelX]="'Meses de experiencia'"
-  [title]="'Experiencia laboral por técnologías'"
+[data]="experienciaLaboralSkillsChartData" 
+[labelY]="'Tecnologías'" 
+[labelX]="'Meses de experiencia'"
+[title]="'Experiencia laboral por técnologías'"
+/>
+
+<app-vertical-bar-graph [data]="horasTecnologiaCursoChartData" [title]="'Horas de capacitación por tecnología'"/>
+
+<app-number-card 
+[data]="horasPorPlataformaGraphData" 
+[title]="'Horas de Bootcamps y cursos por plataforma'"
 />
 
 <app-pie-chart-graph [data]="experienciaChartData" [title]="'Antiguedad por empresa (meses)'"/>
 
-<app-number-card 
-  [data]="horasPorCursoPieGridData" 
-  [title]="'Horas de Bootcamps y cursos por plataforma'"
-  />
+<app-andvanced-pie-chart-graph [data]="educFormalChartData" [title]="'Educación formal en años'" [subtitle]="'(Incluye Científico humanista)'"/>
 
-<app-andvanced-pie-chart-graph [data]="educFormalChartData" [title]="'Educación formal en años (incluye Científico humanista)'"/>
+<app-pie-grid-graph [data]="experienciaPorActividadChartData" [title]="'Experiencia en programación por tipo de actividad en años'"  [subtitle]="'(Excluye Científico humanista)'"/>
 
-<app-pie-grid-graph [data]="experienciaPorActividadChartData" [title]="'Experiencia en programación por tipo de actividad en años'"/>
 
 </div>

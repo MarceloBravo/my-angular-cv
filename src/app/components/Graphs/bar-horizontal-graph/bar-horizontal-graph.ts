@@ -12,6 +12,7 @@ export class BarHorizontalGraph implements OnChanges {
   @Input() labelX: string = 'Label X';
   @Input() labelY: string = 'Label Y';
   @Input() title: string = '';
+  @Input() subtitle: string = '';
   view: [number, number] = [600, 300];
 
   // options

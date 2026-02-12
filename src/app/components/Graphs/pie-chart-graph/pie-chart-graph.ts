@@ -10,6 +10,7 @@ import { NgxChartsModule, LegendPosition } from '@swimlane/ngx-charts';
 export class PieChartGraph {
   @Input() data: any[] = [];
   @Input() title: string = '';
+  @Input() subtitle: string = '';
   view: [number, number] = [600, 300];
 
   // options

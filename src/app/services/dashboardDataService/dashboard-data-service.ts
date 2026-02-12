@@ -22,7 +22,6 @@ import { jobs } from '../../data/jobs.js'
 import { data as skills } from '../../data/skills.js'
 // @ts-ignore
 import { portfolio } from '../../data/portfolio.js'
-import { AniosEstudiosInterface } from '../../interface/anios-estudios-interface';
 
 @Injectable({
   providedIn: 'root',
@@ -48,7 +47,7 @@ export class DashboardDataService {
     otrosCursos.forEach((item: OtherCoursesInterface) => {
       result.push({
         nombre: item.name,
-        plataforma: 'Sence',
+        plataforma: 'Otros',
         institucion_capacitadora: item.institution,
         fecha: item.lblEndDate ? this.dateUtils.parseDDMMYYYY(item.lblEndDate) : null,
         duracion: item.lblDuration ? parseFloat(item.lblDuration) : 0,
@@ -64,17 +63,17 @@ export class DashboardDataService {
   extraerTecnologias(): string[]{
     let tecnologias: string[] = [];
 
-    cursosSence.contents.forEach((element: string) => {
+    cursosSence.forEach((item: SenceCoursesInterface) => item.contents.forEach((element: string) => {
       if(element && !tecnologias.includes(element)){
         tecnologias.push(element);
       }
-    });
+    }));
 
-    otrosCursos.contents.forEach((element: string) => {
+    otrosCursos.forEach((item: OtherCoursesInterface) => item.contents.forEach((element: string) => {
       if(element && !tecnologias.includes(element)){
         tecnologias.push(element);
       }
-    });
+    }));
 
     console.log('tecnologías', tecnologias);
     return tecnologias;
