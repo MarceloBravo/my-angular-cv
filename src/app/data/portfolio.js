@@ -1,5 +1,20 @@
 export const portfolio = [
     {
+        title: 'Mi página web',
+        image: 'mi-web.png',
+        video: null,
+        mouse_move_title: 'Mi Página Web',
+        mouse_move_description: 'Ya te encuentras en ésta aplicación',
+        description: [
+            'Este proyecto corresponde a la actual página web, la cual fue pensada cómo una forma de dar a conocer mi experiencia tanto profecional cómo académica relacionada con la programación a lo largo de mis años.',
+            'La página pretende ser una versión más dinámica de mi currículum agregando el valor de poder apreciar mi desarrollo profecional a través de métricas visualizadas en gráficos y además poder entregar las evidencias de algunas capacitaciones a través de la visualización de sus certificados',
+            'Entre las tecnología utilizadas para ésta web se encuentran: Angular, TypeScript, HTML, Sass, JavaScript, Bootstrap, NgxChart, Git y GitHub',
+            'El proyecto se encuentra almacenado en <b>GitHub</b> pero al tratarse de mi página web el código fuente no es público (lo siento)'
+        ],
+        paragraph: 'Puedes descargar mi currículum desde el botón <b>Descargar CV</b> que se encuentra en cada página o ir a la página <b>Contacto</b> para contactarme a través del formulario',
+        link: 'https://shop-backend-production-acc2.up.railway.app/api-docs/'
+    },
+    {
         title: 'Backend tienda - Shop-backend',
         image: 'API - Shop-backend.png',
         video: null,

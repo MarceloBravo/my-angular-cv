@@ -11,7 +11,8 @@ export const education=[
             description: 'El diplomado comprende los cursos de Phyton, Phyton y bases de datos, Django, y MachineLearning.',            
         },
         styles: 'puc',
-        short_title: 'Diplomado Python'
+        short_title: 'Diplomado Python',
+        duration: 12
     },
     {
         header: {
@@ -25,7 +26,8 @@ export const education=[
             description: 'Programa de prosecución de estudios para técnicos de nivel Superior en computación o Análisis de sistemas conducente al título de Ingeniero en ejecución en computación e Informática. Aprobado con Distinción'
         },
         styles: 'ucm',
-        short_title: 'Ingeniería en Informática'
+        short_title: 'Ingeniería en Informática',
+        duration: 36
     },
     {
         header:{
@@ -39,7 +41,8 @@ export const education=[
             description: 'Cursado en la sede Talca del Centro de formación Técnica San Agustín de Talca. Aprobado con Distinción Máxima'
         },
         styles: 'cft',
-        short_title: 'Analista programador'
+        short_title: 'Analista programador',
+        duration: 42
     },
     {
         header: {
@@ -53,7 +56,8 @@ export const education=[
             description: 'Enseñanza Media Técnico Profesional conducente al título de Técnico Programador en Computación de Nivel Superior (Año de egreso 2005, año de Titulación 2009)'
         },
         styles: 'insuco',
-        short_title: 'Técnico programador'
+        short_title: 'Técnico programador',
+        duration: 72
     },
     {
         header: {
@@ -67,6 +71,7 @@ export const education=[
             description: 'Licencia de Enseñanza Media Científico Humanista (Año de Egreso 1994).'
         },
         styles: 'lam',
-        short_title: 'Ensañanza mendia'
+        short_title: 'Ensañanza mendia',
+        duration: 48
     }
 ];

@@ -10,7 +10,7 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
 export class PieGridGraph {
   @Input() data: any[] = [];
   @Input() title: string = '';
-  view: [number, number] = [700, 300];
+  view: [number, number] = [600, 300];
 
   // options
   colorScheme = 'cool';

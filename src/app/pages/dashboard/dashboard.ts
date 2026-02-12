@@ -9,13 +9,21 @@ import { PieChartGraph } from '../../components/Graphs/pie-chart-graph/pie-chart
 import { NumberCardGraph } from '../../components/Graphs/number-card/number-card-grap';
 import { ItemGraphInterface } from '../../interface/item-graph-interface';
 import { AndvancedPieChartGraph } from '../../components/Graphs/andvanced-pie-chart-graph/andvanced-pie-chart-graph';
-import { DataEducation } from '../../class/data-education';
+import { Courses as CoursesServices } from '../../services/courses/courses';
 import { Education } from '../../services/education/education';
 import { AniosEstudiosInterface } from '../../interface/anios-estudios-interface';
+import { PieGridGraph } from '../../components/Graphs/pie-grid-graph/pie-grid-graph';
 
 @Component({
   selector: 'app-dashboard',
-  imports: [NgApexchartsModule, BarHorizontalGraph, PieChartGraph, NumberCardGraph, AndvancedPieChartGraph],
+  imports: [
+      NgApexchartsModule, 
+      BarHorizontalGraph, 
+      PieChartGraph, 
+      NumberCardGraph, 
+      AndvancedPieChartGraph, 
+      PieGridGraph
+    ],
   templateUrl: './dashboard.html',
   styleUrl: './dashboard.scss',
 })
@@ -25,6 +33,7 @@ export class Dashboard implements OnInit {
   public horasPorCursoPieGridData: any[] = [];
   public educFormalChartData: any[] = [];
   public experienciaLaboralSkillsChartData: any[] = [];
+  public experienciaPorActividadChartData: any[] = []
 
   // Configuraciones de gráficos
   public skillsChartOptions: any = {}
@@ -43,7 +52,8 @@ export class Dashboard implements OnInit {
  
   constructor(
     private dashboardService: DashboardDataService,
-    private educationService: Education
+    private educationService: Education,
+    private coursesServices: CoursesServices
   ) {}
  
   ngOnInit(): void {
@@ -66,6 +76,8 @@ export class Dashboard implements OnInit {
     this.datosEducacionFormal();
 
     this.experienciaLaboralSkills();
+
+    this.experienciaPorActividad();
     
   }
 
@@ -132,9 +144,35 @@ export class Dashboard implements OnInit {
     .map((item: AniosEstudiosInterface) => {
       return {
         name: item.label,
-        value: item.duracion
+        value: item.anios
       }
     });
+  }
+
+  private experienciaPorActividad(): void{
+    const data: ItemGraphInterface[] = [];
+    
+    data.push({
+      name: 'Laboral', //Meses
+      value: this.experienciaData.reduce((acum: number, item: any) => acum + (item.duracionMeses / 12), 0)
+    })
+    console.log('EDUC FORMAL', this.educFormalChartData)
+    data.push({
+      name: 'Educación formal', //Años
+      value: this.educFormalChartData.reduce((acum: number, item: ItemGraphInterface) => acum + (item.name !== 'Ensañanza mendia' ? item.value : 0), 0),
+    })
+
+    data.push({
+      name: 'SENCE y Bootcamps', //Horas
+      value: this.coursesServices.getCursosSence().reduce((acum: number, item: any) => acum + ((item.lblDuration / (60*12))), 0),
+    })
+
+    data.push({
+      name: 'Plataformas',  //Horas
+      value: this.coursesServices.getOtrosCursos().reduce((acum: number, item: any) => acum + ((item.lblDuration / (60*12))), 0),
+    })
+    
+    this.experienciaPorActividadChartData = data;
   }
 }
 

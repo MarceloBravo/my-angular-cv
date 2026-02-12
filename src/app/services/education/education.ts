@@ -19,7 +19,8 @@ export class Education {
         title: item.body.title, 
         institution: item.body.institution, 
         description: item.body.description, 
-        styles: item.styles
+        styles: item.styles,
+        duration: item.duration
       };
     });
     return data;
@@ -33,9 +34,10 @@ export class Education {
         desde: desde, 
         hasta: hasta, 
         institucion: item.body.institution, 
-        duracion: hasta - desde, 
+        duracion: item.duration, 
         carrera: item.body.tittle,
-        label: item.short_title
+        label: item.short_title,
+        anios: item.duration / 12
       }
     });
 

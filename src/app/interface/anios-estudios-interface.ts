@@ -4,5 +4,6 @@ export interface AniosEstudiosInterface {
     institucion: string, 
     duracion: number, 
     carrera: string,
-    label: string
+    label: string,
+    anios: number
 }
