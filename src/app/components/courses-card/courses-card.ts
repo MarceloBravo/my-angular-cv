@@ -3,10 +3,11 @@ import { SenceCoursesInterface } from '../../interface/sence-courses-interface';
 import AOS from 'aos';
 import { OtherCoursesInterface } from '../../interface/other-courses-interface';
 import { DateUtilsService } from '../../services/date-utils.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-courses-card',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './courses-card.html',
   styleUrl: './courses-card.scss',
 })
