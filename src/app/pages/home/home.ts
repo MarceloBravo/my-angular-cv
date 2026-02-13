@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import AOS from 'aos';
 import { Skills as SkillService } from '../../services/skills/skills';
@@ -13,7 +13,7 @@ import { UserPersonalInfoInterface } from '../../interface/user-personal-info-in
   templateUrl: './home.html',
   styleUrl: './home.scss',
 })
-export class Home implements OnInit {
+export class Home implements AfterViewInit {
   skills: Skills[] = [];
   presentation: UserPresentationInterface  = {
     parrafo1: '',
@@ -33,10 +33,24 @@ export class Home implements OnInit {
     private userDataService: UserData
   ) {}
 
-  ngOnInit() {
-    AOS.init();
+  ngAfterViewInit() {
+    // Cargar datos en el siguiente ciclo de detección para evitar el error
+    setTimeout(() => {
+      console.log('Loading home data...');
+      this.loadData();
+      AOS.init();
+    }, 0);
+  }
+
+  private loadData() {
+    console.log('Loading home data...');
     this.skills = this.skillsService.getSkills();
     this.personalInfo = this.userDataService.getPersonalInfo();
     this.presentation = this.userDataService.getPresentationInfo();
+    console.log('Home data loaded:', { 
+      skills: this.skills.length, 
+      presentation: !!this.presentation.parrafo1,
+      personalInfo: !!this.personalInfo.email 
+    });
   }
 }
