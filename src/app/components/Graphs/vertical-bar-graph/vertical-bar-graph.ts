@@ -13,9 +13,9 @@ export class VerticalBarGraph {
   @Input() subtitle: string = '';
   @Input() xAxisLabel: string = 'Country';
   @Input() yAxisLabel: string = 'Population';
-  view: [number, number] = [700, 400];
+  view: [number, number] = [this.getWidthScreen(), 400];
 
-  // options
+  // optionss
   showXAxis = true;
   showYAxis = true;
   gradient = false;
@@ -27,6 +27,11 @@ export class VerticalBarGraph {
 
   constructor() {
     Object.assign(this, { data: this.data })
+  }
+
+  private getWidthScreen(): number{
+    const porcentajeAncho: number = 600 * 100 / window.innerWidth;
+    return window.innerWidth <= 768 ? window.innerWidth : porcentajeAncho * window.innerWidth / 100;
   }
 
   onSelect(event: any) {

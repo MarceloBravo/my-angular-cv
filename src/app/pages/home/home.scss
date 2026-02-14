@@ -46,191 +46,6 @@
     object-fit: contain;
 }
 
-// Estilos para el perfil principal
-.profile-page {
-    .page-header {
-        min-height: 550px;
-        
-        &.page-header-small {
-            height: 60vh;
-            max-height: 440px;
-        }
-        
-        .page-header-image {
-            position: absolute;
-            background-size: cover;
-            background-position: center center;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            
-            &[data-parallax="true"] {
-                background-image: url('../../assets/images/code.jpg');
-            }
-        }
-        
-        .container {
-            height: 100%;
-            z-index: 1;
-            text-align: center;
-            position: relative;
-            
-            .content-center {
-                position: absolute;
-                top: 15%;
-                left: 50%;
-                transform: translate(-50%, -15%);
-                color: #FFFFFF;
-                width: 100%;
-                max-width: 880px;
-                
-                .cc-profile-image {
-                    a{
-                       position: relative; 
-
-                       :before {
-                            content: "";
-                            border: 15px solid rgba(55, 140, 63, 0.6);
-                            border-radius: 50%;
-                            height: 180px;
-                            width: 180px;
-                            position: absolute;
-                            left: 0;
-                            -webkit-animation: pulsate 1.6s ease-out;
-                                    animation: pulsate 1.6s ease-out;
-                            -webkit-animation-iteration-count: infinite;
-                                    animation-iteration-count: infinite;
-                            opacity: 0.0;
-                            z-index: 99; 
-                        }
-
-                        :hover img {
-                            transform: scale(1.06, 1.06); 
-                        }
-
-                        :hover:before {
-                            -webkit-animation: none;
-                                    animation: none; 
-                        }
-                    }
-
-                    img {
-                        position: relative;
-                        border-radius: 50%;
-                        height: 180px;
-                        width: 180px;
-                        padding: 0;
-                        margin: 0;
-                        border: 15px solid transparent;
-                        z-index: 9999;
-                        transition: all .3s ease-out; 
-                    }
-                    // Estilos para imagen de perfil
-                }
-                
-                .title {
-                    text-align: center;
-                    margin-top: 20px;
-                }
-                
-                .category {
-                    text-align: center;
-                    
-                    &.text-white {
-                        color: #FFFFFF;
-                    }
-                }
-            }
-        }
-        
-        .section {
-            .button-container {
-                text-align: center;
-                margin-top: -106px;
-                
-                .btn {
-                    border-width: 2px;
-                    font-weight: 400;
-                    font-size: 0.8571em;
-                    line-height: 1.35em;
-                    margin: 10px 1px;
-                    border: 1px solid transparent;
-                    border-radius: 0.1875rem;
-                    padding: 11px 22px;
-                    cursor: pointer;
-                    
-                    &.btn-primary {
-                        background-color: #378C3F;
-                        color: #FFFFFF;
-                        
-                        &:hover {
-                            background-color: #40a249;
-                            color: #FFFFFF;
-                            box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.17);
-                        }
-                    }
-                    
-                    &.btn-default {
-                        background-color: #FFFFFF;
-                        color: #378C3F;
-                        border-color: #378C3F;
-                        
-                        &:hover {
-                            background-color: #378C3F;
-                            color: #FFFFFF;
-                        }
-                    }
-                    
-                    &.btn-round {
-                        border-radius: 30px;
-                    }
-                    
-                    &.btn-lg {
-                        padding: 15px 48px;
-                        font-size: 1em;
-                        height: auto;
-                    }
-                    
-                    &.btn-icon {
-                        height: 2.375rem;
-                        min-width: 2.375rem;
-                        width: 2.375rem;
-                        padding: 0;
-                        overflow: hidden;
-                        position: relative;
-                        line-height: normal;
-                        
-                        i {
-                            position: absolute;
-                            top: 50%;
-                            left: 50%;
-                            transform: translate(-12px, -12px);
-                            line-height: 1.5626rem;
-                            width: 25px;
-                        }
-                    }
-                    
-                    &.smooth-scroll {
-                        // Estilos para scroll suave
-                    }
-                    
-                    &#btn-cv {
-                        background-color: #378C3F;
-                        color: #FFFFFF;
-                        border-color: #378C3F;
-                        
-                        &:hover {
-                            background-color: #40a249;
-                            color: #FFFFFF;
-                            box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.17);
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
 // Estilos para la sección About
 #about {
     .card {
@@ -241,64 +56,239 @@
         width: 100%;
         margin-bottom: 20px;
         box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.2);
-        
-        &[data-aos] {
-            // Estilos para animaciones AOS
-        }
-        
-        .card-body {
-            .h4 {
-                &.mt-0 {
-                    &.title {
-                        // Estilos para títulos
-                    }
-                }
-            }
-            
-            .row {
-                .col-sm-4 {
-                    strong {
-                        &.text-uppercase {
-                            // Estilos para etiquetas en negrita
-                        }
-                    }
-                }
-                
-                .col-sm-8 {
-                    // Estilos para contenido de información
-                }
-            }
-        }
-    }
-}
-
-// Estilos para la sección de habilidades
-#skill {
-    .h4 {
-        &.text-center {
-            &.mb-4 {
-                &.title {
-                    // Estilos para título de sección
-                }
-            }
-        }
-    }
-    
-    .card {
-        &[data-aos] {
-            // Estilos para animaciones AOS en tarjeta de habilidades
-        }
     }
 }
 
 // Estilos responsive
-@media (max-width: 768px) {
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+    #skill .card div {
+        width: 120px !important;
+    }
+    
+    #skill .card div label {
+        font-size: 14px;
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199.98px) {
     #skill .card {
-        flex-direction: column;
-        align-items: center;
+        padding: 4%;
     }
     
     #skill .card div {
+        width: 110px !important;
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991.98px) {
+    #skill .card {
+        padding: 3%;
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    #skill .card div {
+        width: 90px !important;
+        margin: 5px;
+    }
+    
+    #skill .card div label {
+        font-size: 11px;
+    }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767.98px) {
+    #about .card {
+        margin-bottom: 15px;
+        padding: 15px;
+    }
+    
+    #about .card .card-body {
+        padding: 10px;
+    }
+    
+    #about .card .card-body .row {
+        margin-bottom: 10px;
+    }
+    
+    #about .card .card-body .row .col-sm-4 {
+        flex: 0 0 40%;
+        max-width: 40%;
+    }
+    
+    #about .card .card-body .row .col-sm-8 {
+        flex: 0 0 60%;
+        max-width: 60%;
+    }
+    
+    #skill .card {
+        padding: 3%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    
+    #skill .card div {
+        width: 80px !important;
+        margin: 5px;
+    }
+    
+    #skill .card div label {
+        font-size: 10px;
+        margin-top: 5px;
+    }
+    
+    .skill-icon {
+        max-height: 50px;
+    }
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+    #about {
+        padding: 0 10px;
+    }
+    
+    #about .card {
+        margin-bottom: 15px;
+        padding: 15px 10px;
+        border-radius: 10px;
+    }
+    
+    #about .card .card-body {
+        padding: 5px;
+    }
+    
+    #about .card .card-body .h4.title {
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+    
+    #about .card .card-body .row {
+        margin-bottom: 8px;
+        flex-direction: column;
+    }
+    
+    #about .card .card-body .row .col-sm-4 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 5px;
+        text-align: left;
+    }
+    
+    #about .card .card-body .row .col-sm-8 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        text-align: left;
+    }
+    
+    #about .card .card-body .row .col-sm-4 strong {
+        font-size: 0.9rem;
+        display: block;
+        margin-bottom: 3px;
+    }
+    
+    #about .card .card-body .row .col-sm-8 {
+        font-size: 0.9rem;
+    }
+    
+    #about .card .card-body p {
+        font-size: 0.9rem;
+        line-height: 1.4;
+        margin-bottom: 10px;
+    }
+    
+    #skill {
+        padding: 0 10px;
+    }
+    
+    #skill .h4.text-center.mb-4.title {
+        font-size: 1.2rem;
         margin-bottom: 20px;
+    }
+    
+    #skill .card {
+        padding: 5%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    #skill .card div {
+        width: 70px !important;
+        margin-bottom: 15px;
+        margin-right: 0;
+    }
+    
+    #skill .card div label {
+        font-size: 9px;
+        margin-top: 5px;
+        text-align: center;
+        word-break: break-word;
+        line-height: 1.2;
+    }
+    
+    .skill-icon {
+        max-height: 45px;
+        width: 45px;
+    }
+    
+    #skill .card div svg.skill-icon {
+        width: 45px;
+        height: 45px;
+    }
+    
+    #skill .card div img.skill-icon {
+        width: 45px;
+        height: 45px;
+    }
+}
+
+// Ultra small devices (very small phones, less than 400px)
+@media (max-width: 399.98px) {
+    #about .card .card-body .h4.title {
+        font-size: 1.1rem;
+    }
+    
+    #about .card .card-body p {
+        font-size: 0.85rem;
+    }
+    
+    #about .card .card-body .row .col-sm-4 strong {
+        font-size: 0.85rem;
+    }
+    
+    #about .card .card-body .row .col-sm-8 {
+        font-size: 0.85rem;
+    }
+    
+    #skill .card div {
+        width: 60px !important;
+        margin-bottom: 12px;
+    }
+    
+    #skill .card div label {
+        font-size: 8px;
+    }
+    
+    .skill-icon {
+        max-height: 40px;
+        width: 40px;
+    }
+    
+    #skill .card div svg.skill-icon {
+        width: 40px;
+        height: 40px;
+    }
+    
+    #skill .card div img.skill-icon {
+        width: 40px;
+        height: 40px;
     }
 }

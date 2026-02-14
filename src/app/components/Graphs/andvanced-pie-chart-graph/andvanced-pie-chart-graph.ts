@@ -11,7 +11,7 @@ export class AndvancedPieChartGraph {
   @Input() data: any[] = [];
   @Input() title: string = '';
   @Input() subtitle: string = '';
-  view: [number, number] = [600, 300];
+  view: [number, number] = [this.getWidthScreen(), 300];
 
   // options
   gradient: boolean = true;
@@ -23,6 +23,13 @@ export class AndvancedPieChartGraph {
 
   constructor() {
     Object.assign(this, { data: this.data });
+  }
+
+
+
+  private getWidthScreen(): number{
+    const porcentajeAncho: number = 600 * 100 / window.innerWidth;
+    return window.innerWidth <= 768 ? window.innerWidth : porcentajeAncho * window.innerWidth / 100;
   }
 
   onSelect(data: any): void {
