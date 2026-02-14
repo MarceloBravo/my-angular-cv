@@ -15,3 +15,16 @@
     top: 248px;
     right: -96px;
 }
+
+@media(max-width: 768px){
+  .pageTitle1{
+    padding-bottom: 0;
+    font-size: xxx-large;
+    position: fixed;
+    top: 87%;
+  }
+
+  .pageTitle2{
+    display: none;
+  }
+}

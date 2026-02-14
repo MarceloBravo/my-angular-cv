@@ -19,7 +19,7 @@ export class BarHorizontalGraph implements OnChanges {
   showXAxis: boolean = true;
   showYAxis: boolean = true;
   gradient: boolean = false;
-  showLegend: boolean = true;
+  showLegend: boolean = window.innerWidth > 768;
   showXAxisLabel: boolean = true;
   yAxisLabel: string = 'Country';
   showYAxisLabel: boolean = true;

@@ -15,7 +15,7 @@ export class AndvancedPieChartGraph {
 
   // options
   gradient: boolean = true;
-  showLegend: boolean = true;
+  showLegend: boolean = window.innerWidth > 768;
   showLabels: boolean = true;
   isDoughnut: boolean = false;
 

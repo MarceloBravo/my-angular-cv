@@ -15,7 +15,7 @@ export class PieChartGraph {
 
   // options
   gradient: boolean = false;
-  showLegend: boolean = true;
+  showLegend: boolean = window.innerWidth > 768;
   colorScheme = 'cool';
   legendPosition: LegendPosition = LegendPosition.Right
 

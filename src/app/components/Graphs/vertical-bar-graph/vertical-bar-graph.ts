@@ -16,12 +16,12 @@ export class VerticalBarGraph {
   view: [number, number] = [this.getWidthScreen(), 400];
 
   // optionss
-  showXAxis = true;
-  showYAxis = true;
-  gradient = false;
-  showLegend = true;
-  showXAxisLabel = true;
-  showYAxisLabel = true;
+  showXAxis: boolean = true;
+  showYAxis: boolean = true;
+  gradient: boolean = false;
+  showLegend: boolean = window.innerWidth > 768;
+  showXAxisLabel: boolean = true;
+  showYAxisLabel: boolean = true;
 
   colorScheme = 'cool';
 
