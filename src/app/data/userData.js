@@ -7,7 +7,7 @@ export const presentation = {
 
 export const personalInfo = {
     email: 'mabc@live.cl',
-    telefono: '+56 9 74331085',
+    telefono: '+56 9 58005990',
     ciudad: 'Talca, Chile',
     idioma: 'Español nativo',
 }

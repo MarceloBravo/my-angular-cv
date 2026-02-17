@@ -1,12 +1,20 @@
 <div class="card-courses-container">
     <div class="card-courses">
         <div class="card-courses-front">
-            <img src="../assets/images/certificados/{{data.image}}" alt="Imagen" />
+            <!-- Lazy loading simple -->
+            <img 
+                [src]="'../assets/images/certificados/' + data.image"
+                [attr.alt]="data.institution + ' - ' + data.name"
+                loading="lazy"
+                decoding="async"
+                (load)="onImageLoad($event)"
+                (error)="onImageError($event)"
+                class="course-image"/>
         </div>
         <div class="card-courses-back">
             <div class="row row-card-courses">
                 <p><b>{{data.institution}}</b></p>
-                <p>Fecha: {{dateUtils?.formatearFechaLenguajeNatural(data.lblEndDate)}}</p>
+                <p>Fecha: {{formatDate(data.lblEndDate)}}</p>
                 <p>Duración: {{data.lblDuration}} horas</p>
                 <p *ngIf="data.url"><a href="{{data.url}}" target="_blank">Ver certificado</a></p>
                 <p *ngIf="!data.url"><a href="../assets/images/certificados/{{data.image}}" target="_blank">Ver certificado</a></p>

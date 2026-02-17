@@ -4,8 +4,13 @@
             <a href="../assets/images/certificados/{{data.image}}"
                 target="_blank">
                 <img 
-                    src="../assets/images/certificados/{{data.image}}"
-                    alt="Imagen"/>
+                    [src]="'../assets/images/certificados/' + data.image"
+                    [attr.alt]="data.institute + ' - ' + data.name"
+                    loading="lazy"
+                    decoding="async"
+                    (load)="onImageLoad($event)"
+                    (error)="onImageError($event)"
+                    class="course-image"/>
                 <p>{{data.label}}</p>
             </a>
         </div>
@@ -13,9 +18,8 @@
             <div class="row row-card-courses">
                 <label><b>{{data.institute}}</b></label>
                 <label>{{data.name}}</label>
-                <label>Fecha: {{data.lblEndDate}}</label>
+                <label>Fecha: {{formatDate(data.lblEndDate)}}</label>
                 <label>Duración: {{data.lblDuration}} horas</label>
-
             </div>
         </div>
     </div>

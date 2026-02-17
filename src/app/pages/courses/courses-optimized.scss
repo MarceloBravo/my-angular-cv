@@ -1,0 +1,40 @@
+// Estilos optimizados para el componente courses
+.container-courses {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.cc-reference {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section {
+  padding: 40px 0;
+}
+
+// Responsive optimizations
+@media (max-width: 768px) {
+  .container-courses {
+    gap: 15px;
+    padding: 15px;
+  }
+  
+  .section {
+    padding: 30px 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .container-courses {
+    gap: 10px;
+    padding: 10px;
+  }
+  
+  .section {
+    padding: 20px 0;
+  }
+}
