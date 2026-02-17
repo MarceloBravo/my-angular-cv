@@ -21,7 +21,7 @@
   border-radius: 10px;
   overflow: hidden;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
 
@@ -43,12 +43,18 @@
   color: rgb(17, 17, 17);
   transform: rotateY(180deg);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 10px 20px;
+  padding: 15px 20px;
   font-size: 1rem;
   border-radius: 10px;
+  gap: 8px;
+}
+
+.sense-front {
+  padding: 30px;
 }
 
 .row-card-courses {
@@ -56,18 +62,23 @@
   justify-content: center;
   flex-wrap: nowrap;
   flex-direction: column;
+  gap: 6px;
 }
 
-.card-courses-container:hover .card-courses {
+.card-courses-container:hover .card-courses,
+.card-courses-container:hover .card-courses-sence {
   transform: rotateY(180deg);
 }
 
-// Responsive optimizations
 @media (max-width: 768px) {
   .card-courses {
     width: 250px;
     height: 167px;
     margin: 5% 0px;
+  }
+  
+  .sense-front {
+    padding: 20px;
   }
 }
 
@@ -76,6 +87,11 @@
     width: 280px;
     height: 180px;
     margin: 3% 0px;
+  }
+  
+  .sense-front {
+    padding: 18px;
+    font-size: 0.9rem;
   }
   
   .row-card-courses {
