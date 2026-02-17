@@ -52,12 +52,14 @@ import { SenceCoursesInterface } from '../../interface/sence-courses-interface';
       color: rgb(17, 17, 17);
       transform: rotateY(180deg);
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
-      padding: 10px 20px;
+      padding: 15px 20px;
       font-size: 1rem;
       border-radius: 10px;
+      gap: 8px;
     }
     
     .sense-front {
@@ -69,6 +71,7 @@ import { SenceCoursesInterface } from '../../interface/sence-courses-interface';
       justify-content: center;
       flex-wrap: nowrap;
       flex-direction: column;
+      gap: 6px;
     }
     
     .card-courses-container:hover .card-courses,
@@ -90,18 +93,20 @@ import { SenceCoursesInterface } from '../../interface/sence-courses-interface';
     
     @media (max-width: 576px) {
       .card-courses {
-        width: 200px;
-        height: 133px;
+        width: 280px;
+        height: 180px;
         margin: 3% 0px;
       }
       
       .sense-front {
-        padding: 15px;
+        padding: 18px;
         font-size: 0.9rem;
       }
       
       .row-card-courses {
         font-size: 0.8rem;
+        line-height: 1.3;
+        gap: 4px;
       }
     }
   `]

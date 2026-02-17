@@ -81,13 +81,15 @@ import { OtherCoursesInterface } from '../../interface/other-courses-interface';
     
     @media (max-width: 576px) {
       .card-courses {
-        width: 200px;
-        height: 133px;
+        width: 280px;
+        height: 180px;
         margin: 3% 0px;
       }
       
       .row-card-courses {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
+        line-height: 1.3;
+        gap: 4px;
       }
     }
   `]
