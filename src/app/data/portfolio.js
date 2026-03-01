@@ -15,6 +15,22 @@ export const portfolio = [
         link: 'https://shop-backend-production-acc2.up.railway.app/api-docs/'
     },
     {
+        title: 'Taskflow App',
+        image: 'taskflow-app.png',
+        video: null,
+        mouse_move_title: 'Taskflow App',
+        mouse_move_description: 'Click aquí para ir a la aplicación',
+        description: [
+            'Esta aplicación corresponde a un proyecto fullstask propuesto cómo desafía en la plataforma TalentOps.',
+            'El proyecto corresponde a una aplicación que permite registrar proyectos y yareas asociadas a dichos proyectos además de mostrar el abance de cada uno en un dashboard',
+            'Entre las tecnología utilizadas para el frontend de ésta aplicación web se encuentran: React, JavaScript, HTML, Sass, Bootstrap, Axios aplicando interceptors, JWT para autenticación, Git y GitHub',
+            'El backend de la aplicación se encuentra desarrollado en node.js aplicando principios SOLID y Clean Code, además de implementar Testing (Jest y Supertest), implementación de principios SOLID y Clean Code, integración Continua, despliegue continuo, GitHub, GitHub Actions, uso de secrets en GitHub, Express, multer y bcrypt',
+            
+        ],
+        paragraph: 'El proyecto se encuentra almacenado en <b><a href="https://github.com/MarceloBravo/talentosp-front-back-clase5.git">GitHub</a></b>',
+        link: 'https://mabc-taskflow-app.netlify.app/'
+    },
+    {
         title: 'Backend tienda - Shop-backend',
         image: 'API - Shop-backend.png',
         video: null,
