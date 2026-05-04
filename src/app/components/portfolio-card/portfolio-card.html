@@ -12,10 +12,17 @@
                         <a href="{{ portfolio.link }}">
                             @if(portfolio.video) {
                             <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
-                                <video controls playsinline class="demo-video">
-                                    <source src="{{ portfolio.video }}" type="video/mp4">
-                                    Tu navegador no soporta el elemento de video.
-                                </video>
+                                <iframe 
+                                    width="783" 
+                                    height="442" 
+                                    [src]="safeVideoUrl" 
+                                    [title]="portfolio.title" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                    referrerpolicy="strict-origin-when-cross-origin" 
+                                    style="position:absolute; top:0; left:0; width:100%; height:100%;"
+                                    allowfullscreen>
+                                </iframe>
                             </div>
                             } @else {
                             <figure class="cc-effect">
@@ -67,10 +74,18 @@
                             
                             @if(portfolio.video) {
                                 <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;"> 
-                                    <video controls playsinline class="demo-video">
-                                        <source src="{{ portfolio.video }}" type="video/mp4">
-                                        Tu navegador no soporta el elemento de video.
-                                    </video>
+                                    
+                                    <iframe 
+                                        width="783" 
+                                        height="442" 
+                                        [src]="safeVideoUrl" 
+                                        [title]="portfolio.title" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                        referrerpolicy="strict-origin-when-cross-origin" 
+                                        style="position:absolute; top:0; left:0; width:100%; height:100%;"
+                                        allowfullscreen>
+                                    </iframe>
 
                                 </div>
                             } @else {

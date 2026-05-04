@@ -15,6 +15,21 @@ export const portfolio = [
         link: 'https://shop-backend-production-acc2.up.railway.app/api-docs/'
     },
     {
+        title: 'Mi página web',
+        image: 'mi-web.png',
+        video: 'https://www.youtube.com/watch?v=LXCBB7cdqm8',
+        mouse_move_title: 'SpringEduManager',
+        mouse_move_description: 'Aplicación de gestión educativa',
+        description: [
+            'Esta aplicación desarrollada en Spring-boot corresponde al proyecto final del Bootcamp de Java Full Stack Developer de Talento Digital',
+            'La aplicación consite en una página encargada de gestionar alumnos, cursos y notas, permitiendo agregar, editar y eliminar registros utilizando autenticación de usuarios y manejo de roles con Spring Security',
+            'Además la aplicación contine una API Rest que permite la comunicación con la base de datos mediante peticiones HTTP y no sólo la comunicación del frontend al backend de forma monolítica',
+            'Entre las tecnología utilizadas para ésta web se encuentran: Spring-boot, Java, HTML, CSS, JavaScript, Bootstrap, Thymeleaf, Git y GitHub',
+        ],
+        paragraph: 'El proyecto se encuentra almacenado en <b><a href="https://github.com/MarceloBravo/SpringEduManager.git" target="_blank">GitHub</a></b>',
+        link: null
+    },
+    {
         title: 'Taskflow App',
         image: 'taskflow-app.png',
         video: null,
@@ -27,7 +42,7 @@ export const portfolio = [
             'El backend de la aplicación se encuentra desarrollado en node.js aplicando principios SOLID y Clean Code, además de implementar Testing (Jest y Supertest), implementación de principios SOLID y Clean Code, integración Continua, despliegue continuo, GitHub, GitHub Actions, uso de secrets en GitHub, Express, multer y bcrypt',
             
         ],
-        paragraph: 'El proyecto se encuentra almacenado en <b><a href="https://github.com/MarceloBravo/talentosp-front-back-clase5.git">GitHub</a></b>',
+        paragraph: 'El proyecto se encuentra almacenado en <b><a href="https://github.com/MarceloBravo/talentosp-front-back-clase5.git" target="_blank">GitHub</a></b>',
         link: 'https://mabc-taskflow-app.netlify.app/'
     },
     {
