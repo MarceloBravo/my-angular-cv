@@ -12,7 +12,7 @@ export const portfolio = [
             'El proyecto se encuentra almacenado en <b>GitHub</b> pero al tratarse de mi página web el código fuente no es público (lo siento)'
         ],
         paragraph: 'Puedes descargar mi currículum desde el botón <b>Descargar CV</b> que se encuentra en cada página o ir a la página <b>Contacto</b> para contactarme a través del formulario',
-        link: 'https://shop-backend-production-acc2.up.railway.app/api-docs/'
+        link: 'https://marcelo-antonio-bravo-castillo.netlify.app/'
     },
     {
         title: 'Mi página web',
