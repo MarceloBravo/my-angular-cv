@@ -15,19 +15,34 @@ export const portfolio = [
         link: 'https://marcelo-antonio-bravo-castillo.netlify.app/'
     },
     {
-        title: 'Mi página web',
+        title: 'SpringEduManager',
         image: 'mi-web.png',
         video: 'https://www.youtube.com/watch?v=LXCBB7cdqm8',
-        mouse_move_title: 'SpringEduManager',
+        mouse_move_title: 'Ver video',
         mouse_move_description: 'Aplicación de gestión educativa',
         description: [
             'Esta aplicación desarrollada en Spring-boot corresponde al proyecto final del Bootcamp de Java Full Stack Developer de Talento Digital',
             'La aplicación consite en una página encargada de gestionar alumnos, cursos y notas, permitiendo agregar, editar y eliminar registros utilizando autenticación de usuarios y manejo de roles con Spring Security',
             'Además la aplicación contine una API Rest que permite la comunicación con la base de datos mediante peticiones HTTP y no sólo la comunicación del frontend al backend de forma monolítica',
-            'Entre las tecnología utilizadas para ésta web se encuentran: Spring-boot, Java, HTML, CSS, JavaScript, Bootstrap, Thymeleaf, Git y GitHub',
+            'Entre las tecnología utilizadas para ésta web se encuentran: Spring-boot, Java, HTML, CSS, JavaScript, Bootstrap, Thymeleaf, Git y GitHub, además de implementar principios SOLID y Clean Code',
         ],
         paragraph: 'El proyecto se encuentra almacenado en <b><a href="https://github.com/MarceloBravo/SpringEduManager.git" target="_blank">GitHub</a></b>',
         link: null
+    },
+    {
+        title: 'Tienda online MERN - Netlify + ORACLE Free Tier',
+        image: 'tienda-MERN.png',
+        video: null,
+        mouse_move_title: 'Probar la aplicación',
+        mouse_move_description: null,
+        description: [
+            'Esta aplicación fue desarrollada con MySql, Express, React y Node.js (MERN), consiste en una pequeña tienda on-line que permite registrarse, acceder al mantenedor de productos, acceder a una página de detalle del producto y además seleccionar productos cómo favoritos.',
+            'Una caráctereistica de ésta aplicación es que puede estar cargada en varias pestañas a la vés y la información de los productos seleccionados cómo favoritos estará sincronizada en todas las pestañas.',
+            'Otra carácterística es que el frontend utiliza AXIOS de forma avanzada, configurando interceptores para manejar errores, autenticación y aplicar el refresh token cuando sea necesario.',
+            'En su backend la aplicación implementa principios SOLID y además tanto frontend cómo backend se encuentran dockerizados'
+        ],
+        paragraph: 'El frontend de la aplicación está desplegado en Netlify y tanto el backend cómo la base de datos de MySQL se encuentran en una instancia de ORACLE Free Tier. La aplicación posee 2 repositorios separados: <b><a href="https://github.com/MarceloBravo/talentosp-front-back-clase4-Frontend-.git" target="_blank">Frontend</a></b> y <b><a href="https://github.com/MarceloBravo/talentosp-front-back-clase4-backend.git" target="_blank">Backend + base de datos</a></b>',
+        link: 'https://tienda-mabc-portfolio.netlify.app'
     },
     {
         title: 'Taskflow App',
@@ -116,18 +131,5 @@ export const portfolio = [
         ],
         paragraph: null,
         link: null
-    },
-    {
-        title: 'Tienda online desarrollada en React, Node y Mysql',
-        image: null,
-        video: 'https://marcelo-antonio-bravo-castillo.netlify.app/videos/tienda-react-node.mp4',
-        mouse_move_title: null,
-        mouse_move_description: null,
-        description: [
-            'Poyecto realizado principalmente en React 17, Node js  y MySql, que simula una tienda online, en el cual se pueden realizar búsquedas de productos, para ver su descripción y ser agregados a un carrito de compras, además de efectuar pagos simulados en la plataforma de Webpay en modo developer. También posee un módulo de administración donde se pueden gestionar los productos, configurar la sala de ventas de la tienda, entre otras cosas.',
-            'Nombre de la aplicación: market_react_node'
-        ],
-        paragraph: null,
-        link: null
-    },
+    }
 ]
