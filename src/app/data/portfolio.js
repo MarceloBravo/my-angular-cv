@@ -30,13 +30,13 @@ export const portfolio = [
         link: null
     },
     {
-        title: 'Tienda online MERN - Netlify + ORACLE Free Tier',
+        title: 'Tienda online (MySql, Express, React y Node.js) - Netlify + ORACLE Free Tier',
         image: 'tienda-MERN.png',
         video: null,
         mouse_move_title: 'Probar la aplicación',
         mouse_move_description: null,
         description: [
-            'Esta aplicación fue desarrollada con MySql, Express, React y Node.js (MERN), consiste en una pequeña tienda on-line que permite registrarse, acceder al mantenedor de productos, acceder a una página de detalle del producto y además seleccionar productos cómo favoritos.',
+            'Esta aplicación fue desarrollada con MySql, Express, React y Node.js, consiste en una pequeña tienda on-line que permite registrarse, acceder al mantenedor de productos, acceder a una página de detalle del producto y además seleccionar productos cómo favoritos.',
             'Una caráctereistica de ésta aplicación es que puede estar cargada en varias pestañas a la vés y la información de los productos seleccionados cómo favoritos estará sincronizada en todas las pestañas.',
             'Otra carácterística es que el frontend utiliza AXIOS de forma avanzada, configurando interceptores para manejar errores, autenticación y aplicar el refresh token cuando sea necesario.',
             'En su backend la aplicación implementa principios SOLID y además tanto frontend cómo backend se encuentran dockerizados'
@@ -45,7 +45,7 @@ export const portfolio = [
         link: 'https://tienda-mabc-portfolio.netlify.app'
     },
     {
-        title: 'Taskflow App',
+        title: 'Taskflow App (PERN)',
         image: 'taskflow-app.png',
         video: 'https://youtu.be/A3QWHb39_lI',
         mouse_move_title: 'Taskflow App',
