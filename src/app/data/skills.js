@@ -93,5 +93,15 @@ export const data=[
         name: "Kanban",
         path: null,
         img: "../../assets/images/kanban.png"
+    },
+    {
+        name: "Java",
+        path: null,
+        img: "../../assets/images/java.png"
+    },
+    {
+        name: "Spring Boot",
+        path: null,
+        img: "../../assets/images/spring-boot.png"
     }
 ]

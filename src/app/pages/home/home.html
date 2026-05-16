@@ -14,24 +14,15 @@
                 </div>
                 <div class="col-lg-6 col-md-12">
                     <div class="card-body">
-                        <div class="h4 mt-0 title">Información Básica</div>
-                        <div class="row mt-3">
-                            <div class="col-sm-4"><strong class="text-uppercase">Email:</strong></div>
-                            <a href="mailto:mabc@live.cl" class="col-sm-8">{{personalInfo.email}}</a>
-                        </div>
-                        <div class="row mt-3">
-                            <div class="col-sm-4"><strong class="text-uppercase">Teléfono:</strong></div>
-                            <div class="col-sm-8">{{personalInfo.telefono}}</div>
-                        </div>
-                        <div class="row mt-3">
-                            <div class="col-sm-4"><strong class="text-uppercase">Ciudad:</strong></div>
-                            <div class="col-sm-8">{{personalInfo.ciudad}}</div>
-                        </div>
-                        <div class="row mt-3">
-                            <div class="col-sm-4"><strong class="text-uppercase">Idioma:</strong></div>
-                            <div class="col-sm-8">{{personalInfo.idioma}}</div>
+                        <div class="h4 mt-0 title">Certificaciones</div>
+
+                        <div class="credentials-container">
+                            <div *ngFor="let credential of credentials">
+                                <app-credential [credential]="credential"></app-credential>
+                            </div>
                         </div>
                     </div>
+                    
                 </div>
             </div>
         </div>

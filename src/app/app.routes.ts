@@ -9,8 +9,8 @@ import { Dashboard } from './pages/dashboard/dashboard';
 import { CoursesOptimized } from './pages/courses/courses-optimized';
 
 export const routes: Routes = [
-  {path: '', component: Dashboard},
-  {path: 'about', component: Home},
+  {path: '', component: Home},
+  {path: 'estadisticas', component: Dashboard},
   {path: 'educacion', component: Education},
   {path: 'portafolio', component: Portafolio},
   {path: 'experiencia', component: WorkExperience},

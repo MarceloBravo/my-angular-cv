@@ -1,8 +1,8 @@
 export const presentation = {
-    parrafo1: 'Hola! Soy Marcelo Bravo. Ingeniero en Ejecución en Computación e Informática.',
-    parrafo2: 'Llevo dedicandome al desarrollo de software desde 2010, primero escribiendo aplicaciones de escritorio, con lenguajes tales como Visual FoxPro y Visial Basic 6, luego desde 2013, pasé al desarrollo web con tecnologías tales como javascript, PHP y bootstrap, pero sin frameworks, los cuales los comencé a incorporar entre mis habilidades a partir del 2019.',
-    parrafo3: 'Me he desempeñado en empresas tales cómo Intituciones de Educación, Entidades municipales como la Dirección Comunal de Salud de la ciudad de Talca y también en empresas de desarrollo de software.',
-    parrafo4: 'Reconozco que tengo gran motivación e interés por el constante aprendizaje de nuevos lenguajes, nuevas metodologías de desarrollo y buenas prácticas de programación, lo que se puede evidenciar en la cantidad de cursos relacionados con el desarrollo de software, en los que he participado.',
+    parrafo1: '¡Hola! Soy Marcelo Bravo, Ingeniero en Ejecución en Computación e Informática.',
+    parrafo2: 'Me dedico al desarrollo de software desde el año 2010. Inicié mi camino creando aplicaciones de escritorio con herramientas como Visual FoxPro y Visual Basic 6. En 2013 di el salto al desarrollo web utilizando JavaScript, PHP y Bootstrap, y a partir de 2019 comencé a incorporar los frameworks modernos a mi ecosistema de trabajo.',
+    parrafo3: 'A lo largo de mi carrera, he aportado valor en diversas organizaciones, incluyendo instituciones de educación, entidades municipales y empresas especializadas en desarrollo de software.',
+    parrafo4: 'Me apasiona el aprendizaje continuo, las nuevas metodologías y las buenas prácticas de programación. Creo firmemente en la evolución profesional constante, lo que se refleja en mi participación activa en una gran variedad de cursos y capacitaciones del sector tecnológico.',
 }
 
 export const personalInfo = {

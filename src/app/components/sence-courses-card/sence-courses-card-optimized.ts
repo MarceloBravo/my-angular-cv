@@ -16,7 +16,9 @@ export class SenceCoursesCardOptimized {
   // Formateo de fecha simple
   formatDate(dateString: string): string {
     try {
-      const date = new Date(dateString);
+      const [day, month, year] = dateString.split('/');
+      const isoFormat = `${year}-${month}-${day}`; 
+      const date = new Date(isoFormat);
       return date.toLocaleDateString('es-ES', {
         day: 'numeric',
         month: 'long',

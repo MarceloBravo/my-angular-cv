@@ -59,6 +59,21 @@
     }
 }
 
+#about .card .card-body {
+    p{
+        text-align: justify;
+    }
+    
+    .h4.title {
+        text-align: center !important;
+    }
+}
+
+.credentials-container{
+    display: flex;
+    justify-content: space-around;
+}
+
 // Estilos responsive
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
@@ -167,7 +182,7 @@
     #about .card .card-body .h4.title {
         font-size: 1.2rem;
         margin-bottom: 15px;
-        text-align: center;
+        text-align: center !important;
     }
     
     #about .card .card-body .row {
