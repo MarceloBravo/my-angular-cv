@@ -118,18 +118,5 @@ export const portfolio = [
         ],
         paragraph: null,
         link: 'https://exchange-tracker-mab.netlify.app/'
-    },
-    {
-        title: 'Tienda online desarrollada en Angular, Laravel y Mysql',
-        image: null,
-        video: 'https://marcelo-antonio-bravo-castillo.netlify.app/videos/tienda-angular-laravel.mp4',
-        mouse_move_title: null,
-        mouse_move_description: null,
-        description: [
-            'Proyecto que simula una tienda online, en el cual se pueden realizar busqueda de productos para ver su descripción y ser agregados a un carrito de compras, además de simular pagos utilizando WebPay en modo <i>developer</i>, además posee módulo de administración donde se pueden gestionar los productos y configurar las distintas secciones existentes en la sala de ventas de la tienda.',
-            'Nombre de la aplicación: mabcapp'
-        ],
-        paragraph: null,
-        link: null
     }
 ]

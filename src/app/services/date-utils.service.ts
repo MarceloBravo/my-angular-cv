@@ -162,4 +162,20 @@ export class DateUtilsService {
     return new Date(Number(yyyy), Number(mm) - 1, Number(dd));
   }
 
+  // Formateo de fecha simple
+  static formatDate(dateString: string): string {
+    try {
+      const [day, month, year] = dateString.split('/');
+      const isoFormat = `${year}-${month}-${day}`; 
+      const date = new Date(isoFormat);
+      return date.toLocaleDateString('es-ES', {
+        day: 'numeric',
+        month: 'long',
+        year: 'numeric'
+      });
+    } catch {
+      return dateString;
+    }
+  }
+
 }
