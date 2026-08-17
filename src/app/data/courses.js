@@ -1,5 +1,14 @@
 export const cursosSence = [
     {
+        image: 'fullstack-java.png',
+        title: 'Ampliar Certificado',
+        institute: 'SENCE - Talento Digital - Motion Ltda.',
+        name: 'Bootcamp - Fullstack Java',
+        lblEndDate: '18/04/2026',
+        lblDuration: '480',
+        contents: ['Java', 'J2E', 'Spring-Boot', 'JUnit', 'Jacoco', 'Web Dinámicas Java (V2)', 'Git', 'Github', 'Integración continua (CI)', 'Despliegue contínuo (CD)',  'Secrets Manager', 'Bases de datos relacionales MySql']
+    },
+    {
         image: 'FUNDAMENTOS DE DEVOPS.png',
         title: 'Ampliar Certificado',
         institute: 'SENCE - Talento Digital - Adalid',
@@ -56,6 +65,15 @@ export const cursosSence = [
 ]
 
 export const otrosCursos = [
+    {
+        image: 'google-IA-essentials.png',
+        institution: 'Google + Coursera + Talento Digital',
+        name: 'Google IA Essentials',
+        lblEndDate: '15/08/2026',
+        lblDuration: '4',
+        url: 'https://www.coursera.org/account/accomplishments/specialization/41PIDCU5ZDQF',
+        contents: ['IA Tool','Prompts','Productivity Whit IA','Use IA responsability']
+    },
     {
         image: 'react js aprende a crear un proyecto con webpack y babel.png',
         institution: 'Udemy',
