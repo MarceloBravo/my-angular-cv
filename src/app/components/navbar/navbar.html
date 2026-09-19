@@ -31,14 +31,14 @@
               <a 
                 class="nav-link dropdown-toggle" 
                 routerLink="/" 
-                [state]="{data: 'Quén soy'}" 
+                [state]="{data: 'Quién soy'}" 
                 id="sobreMiDropdown" 
                 role="button" 
                 (click)="toggleDropdownHome($event)"
                 aria-haspopup="true" 
                 [attr.aria-expanded]="isDropdownHomeOpen"
               >
-                Quén soy
+                Quién soy
               </a>
               <ul class="dropdown-menu {{ isOnTop ? '' : 'no-on-top' }}" [class.show]="isDropdownHomeOpen" aria-labelledby="sobreMiDropdown">
                 <li>
