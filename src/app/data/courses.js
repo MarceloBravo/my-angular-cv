@@ -66,6 +66,15 @@ export const cursosSence = [
 
 export const otrosCursos = [
     {
+        image: 'curso-java-globant-talento-ready.png',
+        institution: 'Desafío Latam',
+        name: 'Curso Java Globant - Fundamentos Java',
+        lblEndDate: '31/08/2026',
+        lblDuration: '48',
+        url: 'https://proyectos.desafiolatam.com/v/qji7Mpu7NpQXkXs5kwixgHXS',
+        contents: ['Java','DDD','Clean architecture','JPA','Hibernate','Typescript vanilla']
+    },
+    {
         image: 'google-IA-essentials.png',
         institution: 'Google + Coursera + Talento Digital',
         name: 'Google IA Essentials',
