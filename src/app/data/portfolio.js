@@ -1,6 +1,6 @@
 export const portfolio = [
     {
-        title: 'Mi página web',
+        title: 'Mi página web (Angular)',
         image: 'mi-web.png',
         video: null,
         mouse_move_title: 'Mi Página Web',
@@ -15,7 +15,7 @@ export const portfolio = [
         link: 'https://marcelo-antonio-bravo-castillo.netlify.app/'
     },
     {
-        title: 'SpringEduManager',
+        title: 'SpringEduManager (Java, Spring-boot, Spring Security, SOLID y Clean Code)',
         image: 'mi-web.png',
         video: 'https://www.youtube.com/watch?v=LXCBB7cdqm8',
         mouse_move_title: 'Ver video',
@@ -61,7 +61,7 @@ export const portfolio = [
         link: null
     },
     {
-        title: 'Backend tienda - Shop-backend',
+        title: 'Backend tienda - Shop-backend (Node.js, Express, PostgreSQL, Sequelize, Docker)',
         image: 'API - Shop-backend.png',
         video: null,
         mouse_move_title: 'Endpoint tienda',
@@ -77,7 +77,7 @@ export const portfolio = [
         link: 'https://shop-backend-production-acc2.up.railway.app/api-docs/'
     },
     {
-        title: 'Catálogo de fotos unsplash',
+        title: 'Catálogo de fotos unsplash (React)',
         image: 'unsplash.png',
         video: null,
         mouse_move_title: 'Catálogo de fotos unsplash',
@@ -92,7 +92,7 @@ export const portfolio = [
         link: 'https://willowy-boba-67faa7.netlify.app/'
     },
     {
-        title: 'Catálogo de Películas',
+        title: 'Catálogo de Películas (Vuejs)',
         image: 'Cinema.png',
         video: null,
         mouse_move_title: 'Catálogo de Películas',
@@ -106,7 +106,7 @@ export const portfolio = [
         link: 'https://marcelobravo.github.io/cinema_vue/#/'
     },
     {
-        title: 'Indicadores económicos',
+        title: 'Indicadores económicos (React)',
         image: 'exchange-trakcer.png',
         video: null,
         mouse_move_title: 'Indicadores económicos de Chile',
