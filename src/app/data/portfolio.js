@@ -15,6 +15,20 @@ export const portfolio = [
         link: 'https://marcelo-antonio-bravo-castillo.netlify.app/'
     },
     {
+        title: 'Tienda online (MySql, Express, React y Node.js) - Netlify + ORACLE Free Tier',
+        image: 'tienda-MERN.png',
+        video: null,
+        mouse_move_title: 'Probar la aplicación',
+        mouse_move_description: null,
+        description: [
+            'Tienda en línea full-stack desarrollada con <b>React.js</b> en el frontend y <b>Node.js, Express y MySQL</b> en el backend. Permite el registro de usuarios, consulta del detalle de productos, gestión desde un mantenedor y marcado de favoritos. Destaca por sincronizar los productos favoritos y los productos del carrito de compras en tiempo real entre múltiples pestañas abiertas del navegador y por incorporar un Chat con IA automatizado mediante <b>n8n</b>, además de integración con la pasarela de pagos <b>Webpay</b>.',
+            'El frontend emplea <b>Axios</b> con interceptores avanzados para gestionar errores, autenticación y renovación automática de <b>refresh tokens</b>.' ,
+            'El backend aplica principios <b>SOLID</b>, y tanto el frontend como el backend están dockerizados para facilitar su despliegue y entorno reproducible.'
+        ],
+        paragraph: 'El frontend de la aplicación está desplegado en Netlify y tanto el backend cómo la base de datos de MySQL y n8n para el Chat IA, se encuentran en una instancia de <b>ORACLE Free Tier</b>. La aplicación posee 2 repositorios separados: <b><a href="https://github.com/MarceloBravo/talentosp-front-back-clase4-Frontend-.git" target="_blank">Frontend</a></b> y <b><a href="https://github.com/MarceloBravo/talentosp-front-back-clase4-backend.git" target="_blank">Backend + base de datos</a></b>',
+        link: 'https://tienda-mabc-portfolio.netlify.app'
+    },
+    {
         title: 'SpringEduManager (Java, Spring-boot, Spring Security, SOLID y Clean Code)',
         image: 'mi-web.png',
         video: 'https://www.youtube.com/watch?v=LXCBB7cdqm8',
@@ -28,22 +42,7 @@ export const portfolio = [
         ],
         paragraph: 'El proyecto se encuentra almacenado en <b><a href="https://github.com/MarceloBravo/SpringEduManager.git" target="_blank">GitHub</a></b>',
         link: null
-    },
-    {
-        title: 'Tienda online (MySql, Express, React y Node.js) - Netlify + ORACLE Free Tier',
-        image: 'tienda-MERN.png',
-        video: null,
-        mouse_move_title: 'Probar la aplicación',
-        mouse_move_description: null,
-        description: [
-            'Esta aplicación fue desarrollada con MySql, Express, React y Node.js, consiste en una pequeña tienda on-line que permite registrarse, acceder al mantenedor de productos, acceder a una página de detalle del producto y además seleccionar productos cómo favoritos.',
-            'Una caráctereistica de ésta aplicación es que puede estar cargada en varias pestañas a la vés y la información de los productos seleccionados cómo favoritos estará sincronizada en todas las pestañas.',
-            'Otra carácterística es que el frontend utiliza AXIOS de forma avanzada, configurando interceptores para manejar errores, autenticación y aplicar el refresh token cuando sea necesario.',
-            'En su backend la aplicación implementa principios SOLID y además tanto frontend cómo backend se encuentran dockerizados'
-        ],
-        paragraph: 'El frontend de la aplicación está desplegado en Netlify y tanto el backend cómo la base de datos de MySQL se encuentran en una instancia de ORACLE Free Tier. La aplicación posee 2 repositorios separados: <b><a href="https://github.com/MarceloBravo/talentosp-front-back-clase4-Frontend-.git" target="_blank">Frontend</a></b> y <b><a href="https://github.com/MarceloBravo/talentosp-front-back-clase4-backend.git" target="_blank">Backend + base de datos</a></b>',
-        link: 'https://tienda-mabc-portfolio.netlify.app'
-    },
+    },    
     {
         title: 'Taskflow App (PERN)',
         image: 'taskflow-app.png',

@@ -38,7 +38,7 @@
 
                 </div>
 
-                <div class="col-md-6">
+                <div class="col-md-6 description-container">
                     @for(description of descriptionsSanitized; track $index) {
                         <p [innerHTML]="description"></p>
                     }
@@ -61,7 +61,7 @@
             <div class="row">
                 <h4 class="subtitulo-portafolio">{{ portfolio.title }}</h4>
 
-                <div class="col-md-6">
+                <div class="col-md-6 description-container">
                     @for(description of descriptionsSanitized; track $index) {
                         <p [innerHTML]="description"></p>
                     }
